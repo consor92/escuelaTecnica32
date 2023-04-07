@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+
+.container__EscuelaTecnica {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191D62;
+    color: white;
+    font-weight: bold;
+}
+
+.container__navBar{
+    display: flex;
+    flex-direction: column;
+    width: 1420px;
+}
+
+.container__navBarTop {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #171715;
+    height: 50px;
+}
+
+.container__navBarTop nav{
+    display: flex;
+    margin-right: 20px;   
+}
+
+.container__navBarTop a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: white;
+    margin: auto 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.container__navBarBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F9F9;
+    height: 100px;
+}
+
+.container__navBarBottom  a{
+    color: #171715;
+    margin: auto 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container__login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #9D9D9D;
+}
