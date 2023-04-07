@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  padding: 2rem 5rem 2rem 5rem;
+  justify-content: center;
+  grid-template-areas:
+    "Noticia- Noticia- N1"
+    "Noticia- Noticia- N2"
+    "N4 N5 N3";
+  background-color: rgba(155, 155, 155, 0.781);
+  height: 100vh;
+  width: 100vw;
+}
+
+.Noticia- { 
+  grid-area: Noticia-;
+  background-color: aqua;
+}
+
+.N1 { 
+  grid-area: N1;
+  background-color: rgb(0, 255, 255); 
+}
+
+.N2 { 
+  grid-area: N2;
+  background-color: green; 
+}
+
+.N3 { 
+  grid-area: N3; 
+  background-color: green;
+}
+
+.N4 { 
+  grid-area: N4; 
+  background-color: green;
+}
+
+.N5 { 
+  grid-area: N5; 
+  background-color: green;
+}
