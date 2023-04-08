@@ -28,19 +28,43 @@ export default function Noticias() {
     <div class={styles.N0} onClick={() => handleNoticiaClick(noticias[0].id)}> <img class={styles.img} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
     <h3 class={styles.title_Origen}> Candidato</h3>
     <h2 class={styles.title}> {noticias[0].title}</h2>
-    <h3 class={styles.title_fecha} > hora y fecha</h3>
+    <h3 class={styles.title_fecha}>07/04/2022 </h3>
+    </div>
+    
+    <div class={styles.N1} onClick={() => handleNoticiaClick(noticias[1].id)}>
+    <img class={styles.img_second} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
+    <h3 class={styles.title_Origen_second}> Candidato</h3>
+    <h2 class={styles.title_second}>{noticias[1].title}</h2>
+    <h3 class={styles.title_fecha_second}>07/04/2022 </h3>
     </div>
 
-    
-    <div class={styles.N1} onClick={() => handleNoticiaClick(noticias[1].id)}><h2>{noticias[1].title}</h2></div>
+    <div class={styles.N2} onClick={() => handleNoticiaClick(noticias[1].id)}>
+    <img class={styles.img_second} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
+    <h3 class={styles.title_Origen_second}> Candidato</h3>
+    <h2 class={styles.title_second}>{noticias[2].title}</h2>
+    <h3 class={styles.title_fecha_second}>07/04/2022 </h3>
+    </div>
 
-    <div class={styles.N2} onClick={() => handleNoticiaClick(noticias[2].id)}><h2>{noticias[2].title}</h2></div>
+    <div class={styles.N3} onClick={() => handleNoticiaClick(noticias[1].id)}>
+    <img class={styles.img_second} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
+    <h3 class={styles.title_Origen_second}> Candidato</h3>
+    <h2 class={styles.title_second}>{noticias[3].title}</h2>
+    <h3 class={styles.title_fecha_second}>07/04/2022 </h3>
+    </div>
 
-    <div class={styles.N3} onClick={() => handleNoticiaClick(noticias[3].id)}><h2>{noticias[3].title}</h2></div>
+    <div class={styles.N4} onClick={() => handleNoticiaClick(noticias[1].id)}>
+    <img class={styles.img_second} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
+    <h3 class={styles.title_Origen_second}> Candidato</h3>
+    <h2 class={styles.title_second}>{noticias[4].title}</h2>
+    <h3 class={styles.title_fecha_second}>07/04/2022 </h3>
+    </div>
 
-    <div class={styles.N4} onClick={() => handleNoticiaClick(noticias[4].id)}><h2>{noticias[4].title}</h2></div>
-    
-    <div class={styles.N5} onClick={() => handleNoticiaClick(noticias[5].id)}><h2>{noticias[5].title}</h2></div>
+    <div class={styles.N5} onClick={() => handleNoticiaClick(noticias[1].id)}>
+    <img class={styles.img_second} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
+    <h3 class={styles.title_Origen_second}> Candidato</h3>
+    <h2 class={styles.title_second}>{noticias[5].title}</h2>
+    <h3 class={styles.title_fecha_second}>07/04/2022 </h3>
+    </div>
   </div>}  </>
   )
 }

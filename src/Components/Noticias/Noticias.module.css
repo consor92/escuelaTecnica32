@@ -3,8 +3,8 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 12px;
-  padding: 70px 150px 70px 150px;
-  justify-content: center;
+  padding: 10vh 21.4vw 10vh 21.4vw;
+    justify-content: center;
   grid-template-areas:
     "N0 N0 N1"
     "N0 N0 N2"
@@ -37,11 +37,12 @@
   display: inline-block;
   max-width: 70%;
   text-overflow: ellipsis;
+  font-size: 4vh;
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
   left: 2%;
-  bottom: 12%;
+  bottom: 9%;
 }
 
 .title_fecha {
@@ -56,7 +57,7 @@
   overflow: hidden;
   text-align: right;
   left: 2%;
-  bottom: 7%;
+  bottom: 6%;
 }
 .title_Origen {
   color: white;
@@ -71,30 +72,133 @@
   text-align: right;
   padding: 0 2px 0 2px;
   left: 2%;
-  bottom: 20%;
+  bottom: 17%;
+}
+.N1{
+  grid-area: N1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.N1::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: black;
+}
+.img_second {
+  height: 65%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.title_second {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  left: 2%;
+  bottom: 12%;
+}
+
+.title_fecha_second {
+  color: white;
+  position: absolute;
+  font-size: small;
+  z-index: 1;
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  left: 2%;
+  bottom: 5%;
+}
+.title_Origen_second {
+  color: white;
+  background-color: #F90334;
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 0 2px 0 2px;
+  left: 2%;
+  bottom: 22%;
 
 }
-.N1 {
-  grid-area: N1;
-  background-color: rgb(0, 255, 255);
-}
+
+
 
 .N2 {
   grid-area: N2;
-  background-color: green;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
 .N3 {
   grid-area: N3;
-  background-color: green;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
 .N4 {
   grid-area: N4;
-  background-color: green;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
 .N5 {
   grid-area: N5;
-  background-color: green;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+.N2::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: black;
+}
+.N3::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: black;
+}
+.N4::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: black;
+}
+.N5::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: black;
 }
