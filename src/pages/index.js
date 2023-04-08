@@ -5,6 +5,9 @@ import { Inter } from 'next/font/google'
 import Noticias from '../Components/Noticias/Noticias'
 import Layout from '@/Components/Layout/Layout'
 
+
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

@@ -3,43 +3,98 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 12px;
-  padding: 2rem 5rem 2rem 5rem;
+  padding: 70px 150px 70px 150px;
   justify-content: center;
   grid-template-areas:
-    "Noticia- Noticia- N1"
-    "Noticia- Noticia- N2"
+    "N0 N0 N1"
+    "N0 N0 N2"
     "N4 N5 N3";
-  background-color: rgba(155, 155, 155, 0.781);
+  background-color: #292929;
   height: 100vh;
   width: 100vw;
+  font-family: 'PT Sans';
 }
 
-.Noticia- { 
-  grid-area: Noticia-;
-  background-color: aqua;
+.N0 {
+  grid-area: N0;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.title {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  left: 2%;
+  bottom: 12%;
 }
 
-.N1 { 
+.title_fecha {
+  color: white;
+  position: absolute;
+  font-size: small;
+  z-index: 1;
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  left: 2%;
+  bottom: 7%;
+}
+.title_Origen {
+  color: white;
+  background-color: #F90334;
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 0 2px 0 2px;
+  left: 2%;
+  bottom: 20%;
+
+}
+.N1 {
   grid-area: N1;
-  background-color: rgb(0, 255, 255); 
+  background-color: rgb(0, 255, 255);
 }
 
-.N2 { 
+.N2 {
   grid-area: N2;
-  background-color: green; 
-}
-
-.N3 { 
-  grid-area: N3; 
   background-color: green;
 }
 
-.N4 { 
-  grid-area: N4; 
+.N3 {
+  grid-area: N3;
   background-color: green;
 }
 
-.N5 { 
-  grid-area: N5; 
+.N4 {
+  grid-area: N4;
+  background-color: green;
+}
+
+.N5 {
+  grid-area: N5;
   background-color: green;
 }
