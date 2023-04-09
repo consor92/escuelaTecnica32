@@ -4,7 +4,7 @@
      --background--black:#171715;
      --background--redIntense:#F90334;
      --background--white:#F9F9F9;
-     --fount-color--black:var(--background--black);
-     --fount-color--redIntense:var(--background--redIntense);
-     --fount-color--white:var(--background--black)
+     --font-color--black:var(--background--black);
+     --font-color--redIntense:var(--background--redIntense);
+     --font-color--white:var(--background--white)
       } 

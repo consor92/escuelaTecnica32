@@ -3,13 +3,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 12px;
-  padding: 10vh 21.4vw 10vh 21.4vw;
+  padding: 10vh 13vw 10vh 13vw;
     justify-content: center;
   grid-template-areas:
     "N0 N0 N1"
     "N0 N0 N2"
     "N4 N5 N3";
-  background-color: #292929;
+  background-color:var(--background--black);
   height: 100vh;
   width: 100vw;
 }
@@ -21,7 +21,7 @@
   align-items: flex-end;
 }
 .img {
-  height: 100%;
+  height: 80%;
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -32,16 +32,16 @@
 .title {
   position: absolute;
   z-index: 1;
-  color: white;
+  color: var(--font-color--white);
   display: inline-block;
-  max-width: 70%;
+  max-width: 90%;
   text-overflow: ellipsis;
-  font-size: 4vh;
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  left: 2%;
-  bottom: 9%;
+  font-size: 20px;
+  left: 12px;
+  bottom: 60px;
 }
 
 .title_fecha {
@@ -50,13 +50,13 @@
   font-size: small;
   z-index: 1;
   display: inline-block;
-  max-width: 70%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  left: 2%;
-  bottom: 6%;
+  font-size: 12px;
+  left: 12px;
+  bottom: 44px;
 }
 .title_Origen {
   color: white;
@@ -64,31 +64,18 @@
   position: absolute;
   z-index: 1;
   display: inline-block;
-  max-width: 70%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
   padding: 0 2px 0 2px;
-  left: 2%;
-  bottom: 17%;
-}
-.N1{
-  grid-area: N1;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
+  font-size: 12px;
+  left: 12px;
+  bottom: 85px;
 }
 
-.N1::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  background-color: black;
-}
 .img_second {
-  height: 65%;
+  height: 60%;
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -101,13 +88,14 @@
   z-index: 1;
   color: white;
   display: inline-block;
-  max-width: 70%;
+  max-width: 90%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  left: 2%;
-  bottom: 12%;
+  font-size: 12px;
+  left: 12px;
+  bottom: 10px;
 }
 
 .title_fecha_second {
@@ -121,8 +109,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  left: 2%;
-  bottom: 5%;
+  font-size: 7px;
+  left: 12px;
+  
 }
 .title_Origen_second {
   color: white;
@@ -136,12 +125,17 @@
   overflow: hidden;
   text-align: right;
   padding: 0 2px 0 2px;
-  left: 2%;
-  bottom: 22%;
-
+  font-size: 7px;
+  left: 12px;
+  bottom: 25px;
 }
 
-
+.N1 {
+  grid-area: N1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
 
 .N2 {
   grid-area: N2;
@@ -158,6 +152,7 @@
 }
 
 .N4 {
+  top:-25px;
   grid-area: N4;
   position: relative;
   display: flex;
@@ -165,39 +160,21 @@
 }
 
 .N5 {
+  top:-25px;
   grid-area: N5;  
   position: relative;
   display: flex;
   align-items: flex-end;
 }
 
+.N5 .img_second {
+  top:-20px;
+  height: 80%;
 
+}
 
-.N2::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  background-color: black;
+.N4 .img_second {
+  top:-20px;
+  height: 80%;
 }
-.N3::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  background-color: black;
-}
-.N4::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  background-color: black;
-}
-.N5::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  background-color: black;
-}
+
