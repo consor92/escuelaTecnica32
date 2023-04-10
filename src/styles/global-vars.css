@@ -1,0 +1,10 @@
+
+    :root {
+     --background--blue:#191D62 ;
+     --background--black:#171715;
+     --background--redIntense:#F90334;
+     --background--white:#F9F9F9;
+     --font-color--black:var(--background--black);
+     --font-color--redIntense:var(--background--redIntense);
+     --font-color--white:var(--background--white)
+      } 
