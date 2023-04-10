@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Style from './NavBar.module.css'
 import Link from 'next/link'
+import { HiMenu } from 'react-icons/hi'
+
+
 
 const navBar = () => {
+  const [sideBarOpen, setSideBarOpen] = useState(false)
+
+  const handleOpenSideBar = () => {
+    setSideBarOpen(!sideBarOpen)
+  }
+
   return (
     <div className={Style.container}>
       <div className={Style.container__EscuelaTecnica}>
@@ -15,7 +24,7 @@ const navBar = () => {
               CALENDARIO
             </Link>
             <Link href='' >
-              NOTICIAS  
+              NOTICIAS
             </Link>
             <Link href='' >
               AUTORIDADES
@@ -45,9 +54,9 @@ const navBar = () => {
 
         </div>
       </div>
-      <div className={Style.container__login}>
-        Login
-      </div>
+      <button onClick={handleOpenSideBar} className={Style.container__sideBar}>
+      <HiMenu />
+      </button>
     </div>
   )
 }

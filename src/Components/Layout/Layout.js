@@ -2,7 +2,6 @@ import React from 'react'
 import Style from './Layout.module.css'
 import Head from 'next/head'
 import NavBar from '../NavBar/NavBar'
-import Home from '../Home/Home'
 
 const Layout = ({ children, title }) => {
   return (
@@ -14,7 +13,6 @@ const Layout = ({ children, title }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-     <Home/>
       <div className={Style.container}>
         {children}
       </div>

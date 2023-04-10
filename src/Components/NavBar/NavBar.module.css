@@ -1,45 +1,48 @@
 .container {
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 
 .container__EscuelaTecnica {
-    width: 350px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #191D62;
-    color: white;
+    background-color: var(--background--blue);
+    color: var(--font-color--white);
     font-weight: bold;
 }
 
-.container__navBar{
+.container__navBar {
     display: flex;
     flex-direction: column;
-    width: 1420px;
+    width: 100%;
 }
 
 .container__navBarTop {
     display: flex;
     justify-content: flex-end;
-    background-color: #171715;
-    height: 50px;
+    background-color: var(--background--black);
+    height: 30px;
 }
 
-.container__navBarTop nav{
+.container__navBarTop nav {
     display: flex;
-    margin-right: 20px;   
+    margin-right: 20px;
 }
 
-.container__navBarTop a{
+.container__navBarTop a {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    color: white;
+    color: var(--font-color--white);
     margin: auto 25px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: var(--font-size--medium);
+    font-weight: 400;
 }
 
 
@@ -47,22 +50,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9F9F9;
-    height: 100px;
+    background-color: var(--background--white);
+    height: 50px;
 }
 
-.container__navBarBottom  a{
-    color: #171715;
-    margin: auto 50px;
-    font-size: 20px;
+.container__navBarBottom a {
+    color: var(--font-color--black);
+    margin: auto 100px;
+    font-size: var(--font-size--regular);
     font-weight: bold;
 }
 
-.container__login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-    background-color: #9D9D9D;
+.container__sideBar {
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    .container__sideBar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 80px;
+        background-color: var(--background--grey);
+        border: none;
+        font-size: var(--font-size--bold);
+    }
+
+    .container__navBar {
+        display: none;
+    }
+
+    .container__EscuelaTecnica {
+        width: 100%;
+    }
 }
