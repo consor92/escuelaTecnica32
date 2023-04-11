@@ -30,6 +30,7 @@
 }
 .News h2 {
   position: absolute;
+  background-color: var(--background--grayTranslucent);
   color: var(--font-color--white);
   display: inline-block;
   max-width: 90%;
@@ -37,9 +38,41 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  font-size: 20px;
-  left: 0;
-  bottom: 0;
+  font-size: var(--font-size--extraLarge);
+  left: 12px;
+  bottom: 30px;
+  border-radius: 50px;
+}
+.News h3 {
+  position: absolute;
+  color: var(--font-color--white);
+  background-color: var(--background--redIntense);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 3px;
+  font-size: var(--font-size--mediun);
+  left: 12px;
+  bottom: 65px;
+}
+
+.News h4 {
+  position: absolute;
+  color: var(--font-color--white);
+  background-color:var(--background--grayTranslucent);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 3px;
+  font-size: var(--font-size--small);
+  left: 12px;
+  bottom: 8px;
 }
 
 
@@ -66,11 +99,50 @@
 
 .News2Child h2 {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  background-color: var(--background--grayTranslucent);
   color: var(--font-color--white);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  font-size: var(--font-size--extraLarge);
+  left: 12px;
+  bottom: 30px;
 }
 
+.News2 h3 {
+  position: absolute;
+  color: var(--font-color--white);
+  background-color: var(--background--redIntense);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 3px;
+  font-size: var(--font-size--mediun);
+  left: 12px;
+  bottom: 65px;
+}
+
+.News2 h4 {
+  position: absolute;
+  color: var(--font-color--white);
+  background-color: var(--background--grayTranslucent);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 3px;
+  font-size: var(--font-size--small);
+  left: 12px;
+  bottom: 8px;
+}
 
 .News3 {
   position: relative;
@@ -97,8 +169,48 @@
 
 .News3Child h2 {
   position: absolute;
-  bottom: 20px;
-  left: 10px;
   color: var(--font-color--white);
+  background-color: var(--background--grayTranslucent);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  font-size: var(--font-size--extraLarge);
+  left: 12px;
+  bottom: 30px;
 }
 
+.News3 h3 {
+  position: absolute;
+  color: var(--font-color--white);
+  background-color: var(--background--redIntense);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 3px;
+  font-size: var(--font-size--mediun);
+  left: 12px;
+  bottom: 65px;
+}
+
+.News3 h4 {
+  position: absolute;
+  color: var(--font-color--white);
+  background-color: var(--background--grayTranslucent);
+  display: inline-block;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  padding: 3px;
+  font-size: var(--font-size--small);
+  left: 12px;
+  bottom: 8px;
+  
+}

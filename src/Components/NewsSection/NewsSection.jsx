@@ -105,14 +105,18 @@ export default function Noticias() {
             <>
               <div className={styles.News}>
                 <img className={styles.img_second} src={News[0].img} alt="Imagen de la noticia"/>
+                <h3>candidato</h3>
                 <h2>{News[0].titulo}</h2>
+                <h4>11/06/06</h4>
               </div>
               
               <div className={styles.News2}>
                 {News.slice(1, 3).map(noticia => (
                   <div key={noticia.id} onClick={() => handleNoticiaClick(noticia.id)} className={styles.News2Child}>
+                    <h3>candidato</h3>
                     <img src={noticia.img} alt="Imagen de la noticia"/>
                     <h2>{noticia.titulo} ALGO</h2>
+                    <h4>11/06/06</h4>
                   </div>
                 ))}
               </div>
@@ -121,7 +125,9 @@ export default function Noticias() {
                 {News.slice(3, 6).map(noticia => (
                   <div key={noticia.id} onClick={() => handleNoticiaClick(noticia.id)} className={styles.News3Child}>
                     <img src={noticia.img} alt="Imagen de la noticia"/>
+                    <h3>candidato</h3>
                     <h2>{noticia.titulo}</h2>
+                    <h4>11/06/06</h4>
                   </div>
                 ))}
               </div>
