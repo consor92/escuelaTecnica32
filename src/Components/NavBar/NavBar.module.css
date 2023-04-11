@@ -84,7 +84,7 @@
         height: 80px;
         background-color: var(--background--grey);
         border: none;
-        font-size: var(--font-size--bold);
+        font-size: var(--font-size--large);
     }
 
     .container__navBar {
@@ -127,10 +127,22 @@
     .container__navBarBottom a {
         width: 100vw;
         margin: 25px 0 25px ;
-        font-size: var(--font-size--bold);
+        font-size: var(--font-size--large);
     }
 
     .container__EscuelaTecnica {
         width: 100%;
     }
 }
+
+@media only screen and (max-width:576px) {
+
+    .container__navBarTop a,
+    .container__navBarBottom a {
+        margin:8px 0 8px 0;       
+    }
+
+    .container__navBarBottom nav{
+        margin-bottom: 40px;
+    }
+}   
