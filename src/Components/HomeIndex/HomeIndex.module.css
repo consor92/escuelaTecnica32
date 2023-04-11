@@ -28,3 +28,20 @@
     line-height: 150%;
     letter-spacing: 0.13rem;
 }
+
+@media only screen and (max-width:768px) {
+    .container {
+        background-position: center;
+    }
+
+    .container p {
+        font-size: var(--font-size--extraLarge);
+    }
+
+}
+
+@media only screen and (max-width:768px){
+    .container p{
+        font-size: var(--font-size--large);
+    }
+}
