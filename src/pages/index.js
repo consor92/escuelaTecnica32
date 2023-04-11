@@ -2,7 +2,7 @@
 // import Image from 'next/image'
 import { Inter } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
-import Noticias from '../Components/Noticias/Noticias'
+import NewsSection from '../Components/NewsSection/NewsSection'
 import Layout from '@/Components/Layout/Layout'
 import HomeIndex from '@/Components/HomeIndex/HomeIndex'
 
@@ -15,8 +15,7 @@ export default function Home() {
   return (
     <>
     <Layout></Layout>
-    <HomeIndex/>
-    <Noticias/>
+    <NewsSection/>
     </>
   )
 }
