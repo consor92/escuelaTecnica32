@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
 import NewsSection from '../Components/NewsSection/NewsSection'
 import Layout from '@/Components/Layout/Layout'
+import HomeIndex from '@/Components/HomeIndex/HomeIndex'
 
 
 
