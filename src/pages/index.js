@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import NewsSection from '../Components/NewsSection/NewsSection'
 import Layout from '@/Components/Layout/Layout'
 import HomeIndex from '@/Components/HomeIndex/HomeIndex'
+import Disciplines from '@/Components/Disciplines/Disciplines'
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
     <Layout></Layout>
     <HomeIndex/>
     <NewsSection/>
+    <Disciplines/>
     </>
   )
 }

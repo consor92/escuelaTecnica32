@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../Assets/Images/bg_disciplines.png');
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background--blue);
+    opacity: 0.9;
+    
+}
+
+.container__mecanica,
+.container__computacion,
+.container__automotores{
+    width: 360px;
+    height: 550px;
+    background-color: blueviolet;
+    z-index: 9;
+    
+}
+
+.container__mecanica{
+    border-radius: 25px 0 25px 0;
+    background-image: url('../../Assets/Images/bg_mecanica.png');
+}
+
+.container__automotores{
+    border-radius: 0 25px 0 25px;
+}

@@ -22,7 +22,7 @@
 
 .container p {
     z-index: 1;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     color: var(--font-color--white);
     line-height: 150%;

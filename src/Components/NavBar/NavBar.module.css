@@ -124,6 +124,9 @@
         position: absolute;
         width: 100%;
     }
+    .container__navBar {
+        display: none;
+      }
 
     .container__navBarTop {
         flex-direction: column;
