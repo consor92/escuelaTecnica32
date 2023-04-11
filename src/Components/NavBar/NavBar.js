@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
 
 
-
 const navBar = () => {
   const [sideBarOpen, setSideBarOpen] = useState(false)
 
@@ -15,7 +14,11 @@ const navBar = () => {
   return (
     <div className={Style.container}>
       <div className={Style.container__EscuelaTecnica}>
-        LA GLORIOSA 32
+        <div className={Style.escuelaTecnica_Img}></div>
+        <div className={Style.escuelaTecnica_info}>
+          <h2>LA GLORIOSA 32</h2>
+          <h3>Gral Jose de San Martin ET32 DE14</h3>
+        </div>
       </div>
       <div className={sideBarOpen ? Style.container__navBarClosed : Style.container__navBar}>
         <div className={Style.container__navBarTop}>

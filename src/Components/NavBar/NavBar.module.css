@@ -8,19 +8,47 @@
 }
 
 .container__EscuelaTecnica {
-    width: 300px;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--background--blue);
     color: var(--font-color--white);
     font-weight: bold;
+    text-align: center;
 }
+
+.escuelaTecnica_Img{
+    background-image: url('../../Assets/Images/logoET32.png');
+    background-size: contain;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+.escuelaTecnica_info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 0;
+}
+
+.escuelaTecnica_info h2 {
+    font-size: var(--font-size--large);
+    margin-bottom: 10px;
+}
+
+.escuelaTecnica_info h3 {
+    font-size: var(--font-size--small);
+    font-weight: 200;
+}
+
 
 .container__navBar {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100% - 350px);
 }
 
 .container__navBarTop {
@@ -45,7 +73,6 @@
     font-weight: 400;
 }
 
-
 .container__navBarBottom {
     display: flex;
     justify-content: center;
@@ -56,7 +83,7 @@
 
 .container__navBarBottom a {
     color: var(--font-color--black);
-    margin: auto 100px;
+    margin: auto 50px;
     font-size: var(--font-size--regular);
     font-weight: bold;
 }
@@ -67,7 +94,7 @@
 }
 
 
-.container__navBarClosed{
+.container__navBarClosed {
     display: none;
 }
 
@@ -80,17 +107,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100px;
+        width: 80px;
         height: 80px;
         background-color: var(--background--grey);
         border: none;
-        font-size: var(--font-size--large);
+        font-size: var(--font-size--extraLarge);
+    }
+
+    .escuelaTecnica_info {
+        margin-right: 30px;
     }
 
     .container__navBar {
         top: 81px;
         right: 0px;
         position: absolute;
+        width: 100%;
     }
 
     .container__navBarTop {
@@ -107,7 +139,7 @@
 
     .container__navBarTop a {
         font-size: var(--font-size--regular);
-        margin:20px 0 20px 0;       
+        margin: 20px 0 20px 0;
     }
 
     .container__navBarBottom {
@@ -117,7 +149,7 @@
         opacity: 0.9;
     }
 
-    .container__navBarBottom nav{
+    .container__navBarBottom nav {
         display: flex;
         flex-direction: column;
         align-items: baseline;
@@ -126,7 +158,7 @@
 
     .container__navBarBottom a {
         width: 100vw;
-        margin: 25px 0 25px ;
+        margin: 25px 0 25px;
         font-size: var(--font-size--large);
     }
 
@@ -139,10 +171,10 @@
 
     .container__navBarTop a,
     .container__navBarBottom a {
-        margin:8px 0 8px 0;       
+        margin: 8px 0 8px 0;
     }
 
-    .container__navBarBottom nav{
+    .container__navBarBottom nav {
         margin-bottom: 40px;
     }
-}   
+}
