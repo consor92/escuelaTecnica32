@@ -61,6 +61,16 @@
     font-weight: bold;
 }
 
+.container__navBarBottom a:hover,
+.container__navBarTop a:hover {
+    color: var(--font-color--redIntense);
+}
+
+
+.container__navBarClosed{
+    display: none;
+}
+
 .container__sideBar {
     display: none;
 }
@@ -78,7 +88,46 @@
     }
 
     .container__navBar {
-        display: none;
+        top: 81px;
+        right: 0px;
+        position: absolute;
+    }
+
+    .container__navBarTop {
+        flex-direction: column;
+        justify-content: center;
+        height: 40vh;
+        opacity: 0.95;
+    }
+
+    .container__navBarTop nav {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .container__navBarTop a {
+        font-size: var(--font-size--regular);
+        margin:20px 0 20px 0;       
+    }
+
+    .container__navBarBottom {
+        justify-content: flex-start;
+        align-items: center;
+        height: 50vh;
+        opacity: 0.9;
+    }
+
+    .container__navBarBottom nav{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 20px;
+    }
+
+    .container__navBarBottom a {
+        width: 100vw;
+        margin: 25px 0 25px ;
+        font-size: var(--font-size--bold);
     }
 
     .container__EscuelaTecnica {

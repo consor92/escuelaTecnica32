@@ -17,7 +17,7 @@ const navBar = () => {
       <div className={Style.container__EscuelaTecnica}>
         LA GLORIOSA 32
       </div>
-      <div className={Style.container__navBar}>
+      <div className={sideBarOpen ? Style.container__navBarClosed : Style.container__navBar}>
         <div className={Style.container__navBarTop}>
           <nav>
             <Link href='' >
@@ -35,27 +35,25 @@ const navBar = () => {
           </nav>
         </div>
         <div className={Style.container__navBarBottom}>
-          <div>
-            <nav>
-              <Link href='' >
-                ESPECIALIDADES
-              </Link>
-              <Link href='' >
-                INSCRIPCIONES
-              </Link>
-              <Link href='' >
-                INFRAESTRUCTURA
-              </Link>
-              <Link href='' >
-                COOPERADORA
-              </Link>
-            </nav>
-          </div>
+          <nav>
+            <Link href='' >
+              ESPECIALIDADES
+            </Link>
+            <Link href='' >
+              INSCRIPCIONES
+            </Link>
+            <Link href='' >
+              INFRAESTRUCTURA
+            </Link>
+            <Link href='' >
+              COOPERADORA
+            </Link>
+          </nav>
 
         </div>
       </div>
       <button onClick={handleOpenSideBar} className={Style.container__sideBar}>
-      <HiMenu />
+        <HiMenu />
       </button>
     </div>
   )
