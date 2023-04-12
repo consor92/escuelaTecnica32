@@ -25,7 +25,8 @@ export default function Noticias() {
     { noticias.length > 0 &&
     <div className={styles.container}>
       
-    <div className={styles.N0} onClick={() => handleNoticiaClick(noticias[0].id)}> <img class={styles.img} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
+    <div className={styles.N0} onClick={() => handleNoticiaClick(noticias[0].id)}>
+    <img class={styles.img} src="https://picsum.photos/id/237/200/300" alt="Imagen de la noticia"/>
     <h3 className={styles.title_Origen}> Candidato</h3>
     <h2 className={styles.title}> {noticias[0].title}</h2>
     <h3 className={styles.title_fecha}>07/04/2022 </h3>
