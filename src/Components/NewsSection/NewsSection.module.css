@@ -1,8 +1,9 @@
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 2vw;
+  gap: 20px;
   grid-auto-flow: row;
   justify-content: center;
   grid-template-areas:
@@ -20,7 +21,8 @@
   grid-area: News;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .News img {
@@ -41,7 +43,7 @@
   font-size: var(--font-size--extraLarge);
   left: 12px;
   bottom: 30px;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 .News h3 {
   position: absolute;
@@ -57,6 +59,7 @@
   font-size: var(--font-size--mediun);
   left: 12px;
   bottom: 65px;
+  border-radius: 5px;
 }
 
 .News h4 {
@@ -80,21 +83,21 @@
   position: relative;
   grid-area: News2;
   display: grid; 
-  grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; 
   gap: 10px;
     grid-template-areas: 
-    "News2 News2"; 
+    "News2 News2";
 }
 
 .News2Child{
   position: relative;
+ 
 }
 
 
 .News2Child img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 
 .News2Child h2 {
@@ -107,9 +110,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  font-size: var(--font-size--extraLarge);
-  left: 12px;
-  bottom: 30px;
+  font-size: 25px;
+  bottom: 36%;
+  left: 1px;
+  padding: 3px;
+  font-size: 22px;
+  bottom: 9px;
+  padding-left:8px;
+
 }
 
 .News2 h3 {
@@ -122,10 +130,13 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  padding: 3px;
+  padding: 1px;
   font-size: var(--font-size--mediun);
-  left: 12px;
-  bottom: 65px;
+  padding: 2px;
+  font-size: 13px;
+  left: 11px;
+  bottom: 40px;
+  
 }
 
 .News2 h4 {
@@ -140,8 +151,14 @@
   text-align: right;
   padding: 3px;
   font-size: var(--font-size--small);
-  left: 12px;
-  bottom: 8px;
+  left: 1px;
+  padding: 3px;
+  font-size: 10px;
+  bottom: 0px;
+  padding-left:8px;
+  border-bottom: 1px solid var(--background--redIntense);
+  border-left: 1px solid var(--background--redIntense);
+  padding-right: px;
 }
 
 .News3 {
@@ -153,8 +170,6 @@
   grid-template-columns: repeat(1fr);
   grid-template-rows: repeat(3,1fr); 
   gap: 10px 10px; 
-  grid-template-areas: 
-    "News2"; 
 }
 .News3Child{
   position: relative;
@@ -164,7 +179,7 @@
 .News3Child img {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 60%;
 }
 
 .News3Child h2 {
@@ -177,9 +192,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  font-size: var(--font-size--extraLarge);
-  left: 12px;
-  bottom: 30px;
+  font-size: 22px;
+  left: 8px;
+  bottom: 13px;
 }
 
 .News3 h3 {
@@ -192,10 +207,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-  padding: 3px;
-  font-size: var(--font-size--mediun);
-  left: 12px;
-  bottom: 65px;
+  padding: 2px;
+  font-size: 13px;
+  left: 8px;
+  bottom: 40px;
 }
 
 .News3 h4 {
@@ -209,8 +224,45 @@
   overflow: hidden;
   text-align: right;
   padding: 3px;
-  font-size: var(--font-size--small);
-  left: 12px;
-  bottom: 8px;
+  font-size: 10px;
+  bottom: 0px;
+  padding-left:8px;
+  border-bottom: 1px solid var(--background--redIntense);
+  border-left: 1px solid var(--background--redIntense);
+}
+.containerButtongrid {  display: grid;
+  grid-template-areas:
+    "prevButton newsButton nextButton";
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left:85%;
+    gap: 5px;
+    top: 10px;
+    font-size:30px;
+}
+
+
+.prevButton { 
+  all: unset;
+  grid-area: prevButton; 
+  color: var(--font-color--white);
+  background-color: red;
+
+
+}
+
+.newsButton { 
+  all: unset;
+  grid-area: newsButton;
+  color: var(--font-color--white);
+  background-color: red;
+}
   
+
+.nextButton {  all: unset;
+  grid-area: nextButton;
+  color: var(--font-color--white);
+  background-color: red;
+ 
 }
