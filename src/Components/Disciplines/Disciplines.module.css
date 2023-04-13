@@ -1,41 +1,110 @@
 .container {
-    width: 100%;
-    height: 100vh;
-    background-image: url('../../Assets/Images/bg_disciplines.png');
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../Assets/Images/bg_disciplines.png');
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
 }
 
 .container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background--blue);
-    opacity: 0.9;
-    
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background--blue);
+  opacity: 0.9;
 }
 
 .container__mecanica,
 .container__computacion,
-.container__automotores{
-    width: 360px;
-    height: 550px;
-    background-color: blueviolet;
-    z-index: 9;
-    
+.container__automotores {
+  width: 360px;
+  height: 550px;
+  z-index: 9;
 }
 
-.container__mecanica{
-    border-radius: 25px 0 25px 0;
-    background-image: url('../../Assets/Images/bg_mecanica.png');
+.container__mecanica {
+  border-radius: 25px 0 25px 0;
+  background-image: url('../../Assets/Images/bg_mecanica.png');
+  position: relative;
 }
 
-.container__automotores{
-    border-radius: 0 25px 0 25px;
+.container__computacion {
+  background-image: url('../../Assets/Images/bg_computacion.png');
+  position: relative;
+}
+
+.container__automotores {
+  border-radius: 0 25px 0 25px;
+  background-image: url('../../Assets/Images/bg_automotores.png');
+  position: relative;
+}
+
+
+.container__mecanica h1,
+.container__computacion h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  font-size: var(--font-size--big);
+  color: var(--font-color--white);
+  text-align: center;
+}
+
+.container__automotores h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  font-size: 42px;
+  color: var(--font-color--white);
+  text-align: center;
+}
+
+
+.container__mecanica::after,
+.container__automotores::after {
+  content: '';
+  position: absolute;
+  border-radius: 25px 0 25px 0;
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  transition: all .7s ease;
+}
+
+
+.container__computacion::after {
+  content: '';
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  transition: all .7s ease;
+}
+
+
+.container__mecanica:hover::after,
+.container__computacion:hover::after,
+.container__automotores:hover::after {
+  background-color: var(--background--redIntense);
+  height: 100%;
+  opacity: 0.6;
+  transition: all .7s ease;
+}
+
+.container__automotores {
+  border-radius: 0 25px 0 25px;
 }
