@@ -4,7 +4,7 @@ import Style from './HomeIndex.module.css'
 const homeIndex = () => {
   return (
     <div className={Style.container}>
-      <p>FORMANDO A LOS <br/> JOVENES DEL <br/> MAÑANA</p>
+      <p>FORMANDO A LOS <br/> JOVENES DEL <br/> MAÑANA.</p>
     </div>
   )
 }
