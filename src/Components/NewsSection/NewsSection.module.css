@@ -1,5 +1,6 @@
 
 .container {
+  font-family: 'PT Sans', sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -239,30 +240,31 @@
     left:85%;
     gap: 5px;
     top: 10px;
-    font-size:30px;
+    font-size:20px;
 }
 
 
 .prevButton { 
   all: unset;
+  font-size:20px;
   grid-area: prevButton; 
   color: var(--font-color--white);
-  background-color: red;
 
 
 }
 
 .newsButton { 
   all: unset;
+  font-size:25px;
+  bottom: 50px;
   grid-area: newsButton;
   color: var(--font-color--white);
-  background-color: red;
 }
   
 
 .nextButton {  all: unset;
   grid-area: nextButton;
+  font-size:20px;
   color: var(--font-color--white);
-  background-color: red;
  
 }

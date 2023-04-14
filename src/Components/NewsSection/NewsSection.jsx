@@ -1,5 +1,6 @@
 import styles from "./NewsSection.module.css";
 import { useRouter } from "next/router";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
 export default function Noticias() {
@@ -139,7 +140,7 @@ export default function Noticias() {
               >
                 <h3>candidato</h3>
                 <img src={noticia.img} alt="Imagen de la noticia" />
-                <h2>{noticia.titulo} ALGO</h2>
+                <h2>{noticia.titulo}</h2>
                 <h4>11/06/06</h4>
               </div>
             ))}
@@ -163,15 +164,15 @@ export default function Noticias() {
 
 
           <div className={styles.containerButtongrid}>
-              {newsIndex > 0 && (
+              {(
                 <button onClick={handlePrevClick} className={styles.prevButton}>
-                  {"<"}
+                  {<AiFillCaretLeft/>}
                 </button>
               )}
 
               {newsIndex + 6 < News.length && (
                 <button onClick={handleNextClick} className={styles.nextButton}>
-                  {">"}
+                  {<AiFillCaretRight/>}
                 </button>
               )}
               <button
