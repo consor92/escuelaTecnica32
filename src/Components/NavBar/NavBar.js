@@ -15,12 +15,12 @@ const navBar = () => {
     <div className={Style.container}>
       <div className={Style.container__EscuelaTecnica}>
         <div className={Style.escuelaTecnica_Img}></div>
-        <div className={Style.escuelaTecnica_info}> 
+        <div className={Style.escuelaTecnica_info}>
           <h2>LA GLORIOSA 32</h2>
           <h3>Gral Jose de San Martin ET32 DE14</h3>
         </div>
       </div>
-      <div className={sideBarOpen? Style.container__navBarClosed : Style.container__navBar}>
+      <div className={`${Style.container__navBar} ${sideBarOpen ? Style.container__navBarOpen : Style.container__navBarClosed}`}>
         <div className={Style.container__navBarTop}>
           <nav>
             <Link href='' >
@@ -39,7 +39,7 @@ const navBar = () => {
         </div>
         <div className={Style.container__navBarBottom}>
           <nav>
-            <a href='#discipline'>
+            <a href='#disciplines'>
               ESPECIALIDADES
             </a>
             <Link href='' >
