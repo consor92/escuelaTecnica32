@@ -39,7 +39,7 @@ const navBar = () => {
         </div>
         <div className={Style.container__navBarBottom}>
           <nav>
-            <a href='#discipline'>
+            <a href='#disciplines'>
               ESPECIALIDADES
             </a>
             <Link href='' >
