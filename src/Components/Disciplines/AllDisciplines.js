@@ -5,22 +5,25 @@ import Link from 'next/link';
 import Discipline from './Discipline/Discipline';
 import { getDisciplineItem } from '@/Service/DisciplineItem';
 
-const AllDisciplines = ({ props }) => {
-  console.log('props:', props);
+
+// export default function AllDisciplines ({data}){
+
+//   console.log("data-------------------------------" + data[0].title)
+//   return (
+//     <> <h1> soy h1 {data[0].title}</h1></>
+//   )
+  
+// }
+
+
+const AllDisciplines = ({ item }) => {
   return (
     <div id='disciplines' className={Style.container}>
-      {props?.map(item => <h1 key={item.id}>{item.title}</h1>)}
+      {item?.map(item => <h1 key={item.id}>{item.title}</h1>)}
     </div>
   )
 }
 
-export async function getStaticProps() {
-  const items = await getDisciplineItem();
-  console.log('caca',items)
-  return {
-    props: {items}
-  }
-}
 
 export default AllDisciplines;
 

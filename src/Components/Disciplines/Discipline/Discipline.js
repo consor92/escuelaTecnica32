@@ -41,3 +41,5 @@ export default Discipline
 
 
 	// < h1 > { items.title }</h1 >
+
+	// [...] se armado de la pagina
