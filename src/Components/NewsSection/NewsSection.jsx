@@ -100,8 +100,13 @@ export default function Noticias() {
   const [newsIndex, setNewsIndex] = useState(0);
   const router = useRouter();
 
-  const handleNoticiaClick = (id) => {
-    router.push(`/news/${id}`);
+  const handleNoticiaClick = (id, noticia) => {
+    router.push(
+      {
+      pathname: `/news/${id}`,
+      query: noticia.titulo,
+      state:  noticia ,
+    });
   };
 
   const handlePrevClick = () => {
@@ -120,7 +125,7 @@ export default function Noticias() {
     <div className={styles.container}>
       {News.length > 0 && (
         <>
-          <div className={styles.News}>
+          <div className={styles.News} onClick={() => handleNoticiaClick(News[newsIndex].id)}>
             <img
               className={styles.img_second}
               src={News[newsIndex].img}
@@ -135,7 +140,7 @@ export default function Noticias() {
             {News.slice(newsIndex + 1, newsIndex + 3).map((noticia) => (
               <div
                 key={noticia.id}
-                onClick={() => handleNoticiaClick(noticia.id)}
+                onClick={() => handleNoticiaClick(noticia.id, noticia)}
                 className={styles.News2Child}
               >
                 <h3>candidato</h3>
@@ -144,14 +149,13 @@ export default function Noticias() {
                 <h4>11/06/06</h4>
               </div>
             ))}
-            
           </div>
 
           <div className={styles.News3}>
             {News.slice(newsIndex + 3, newsIndex + 6).map((noticia) => (
               <div
                 key={noticia.id}
-                onClick={() => handleNoticiaClick(noticia.id)}
+                onClick={() => handleNoticiaClick(noticia.id, noticia)}
                 className={styles.News3Child}
               >
                 <img src={noticia.img} alt="Imagen de la noticia" />
