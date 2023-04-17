@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
 
 
-const navBar = () => {
+const navBar = ({ page }) => {
   const [sideBarOpen, setSideBarOpen] = useState(false)
 
   const handleOpenSideBar = () => {
@@ -13,13 +13,15 @@ const navBar = () => {
 
   return (
     <div className={Style.container}>
-      <div className={Style.container__EscuelaTecnica}>
-        <div className={Style.escuelaTecnica_Img}></div>
-        <div className={Style.escuelaTecnica_info}>
-          <h2>LA GLORIOSA 32</h2>
-          <h3>Gral Jose de San Martin ET32 DE14</h3>
-        </div>
-      </div>
+      <Link href='/' className={Style.container__EscuelaTecnica}>
+        <>
+          <div className={Style.escuelaTecnica_Img}></div>
+          <div className={Style.escuelaTecnica_info}>
+            <h2>LA GLORIOSA 32</h2>
+            <h3>Gral Jose de San Martin ET32 DE14</h3>
+          </div>
+        </>
+      </Link>
       <div className={`${Style.container__navBar} ${sideBarOpen ? Style.container__navBarOpen : Style.container__navBarClosed}`}>
         <div className={Style.container__navBarTop}>
           <nav>
@@ -39,9 +41,8 @@ const navBar = () => {
         </div>
         <div className={Style.container__navBarBottom}>
           <nav>
-            <a href='#disciplines'>
-              ESPECIALIDADES
-            </a>
+            {page === 'home' ? <a href='#disciplines'>ESPECIALIDADES</a> : <Link href='/#disciplines'> ESPECIALIDADES</Link>}
+
             <Link href='' >
               INSCRIPCIONES
             </Link>
