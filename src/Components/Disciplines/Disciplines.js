@@ -30,10 +30,12 @@ const Disciplines = ({ props, showAs }) => {
   }
 
   if (showAs === 'discipline') {
-    console.log('props',props)
+    console.log('props', props)
     return (
-      <div className={Style.container__discipline}>
-        <h1>{props.titleUppercase}</h1>
+      <div className={Style.containerPage}>
+        <div className={Style.container__discipline}>
+          <h1>{props.titleUppercase}</h1>
+        </div>
       </div>
     )
   }
