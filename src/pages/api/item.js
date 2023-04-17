@@ -6,18 +6,21 @@ export default function handler(req, res) {
       id:'automotores',
       title:'Automotores',
       titleUppercase:'AUTOMOTORES',
+      favicon:'/automotores2.ico',
       text: 'Insertar texto'
      },
      {
       id:'computacion',
       title:'Computacion',
       titleUppercase:'COMPUTACION',
+      favicon:'/computacion.ico',
       text:'Insertar texto'
      },
      {
       id:'mecanica',
       title:'Mecanica',
       titleUppercase:'MECANICA',
+      favicon:'',
       text:'Insertar texto'
      }
     ])

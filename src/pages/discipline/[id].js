@@ -5,7 +5,10 @@ import { getItemData, getPathsFromId } from "@/lib/utils";
 export default function DisciplinePage({ item }) {
 	return (
 		<>
-			<Layout>
+			<Layout
+			title={item.title}
+			favicon={item.favicon}
+			>
 				<Disciplines
 					props={item}
 					showAs='discipline' />

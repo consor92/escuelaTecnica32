@@ -12,13 +12,16 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home({ item }) {
   return (
     <>
-      <Layout></Layout>
+      <Layout
+      title='Esc. Tenica 32 "Gral. Jose de San Martin"'
+      favicon='/logoet32.ico'
+      page="home"
+      ></Layout>
         <HomeIndex />
         <NewsSection />
         <Disciplines
           props={item}
-          showAs='allDisciplines' />
-      
+          showAs='allDisciplines' />      
     </>
   )
 }
