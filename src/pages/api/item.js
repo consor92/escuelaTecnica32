@@ -6,7 +6,7 @@ export default function handler(req, res) {
       id:'automotores',
       title:'Automotores',
       titleUppercase:'AUTOMOTORES',
-      favicon:'/automotores2.ico',
+      favicon:'/automotores.ico',
       text: 'Insertar texto'
      },
      {
@@ -20,7 +20,7 @@ export default function handler(req, res) {
       id:'mecanica',
       title:'Mecanica',
       titleUppercase:'MECANICA',
-      favicon:'',
+      favicon:'/mecanica2.ico',
       text:'Insertar texto'
      }
     ])
