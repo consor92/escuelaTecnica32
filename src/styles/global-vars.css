@@ -13,5 +13,8 @@
     --font-size--regular: 18px;
     --font-size--large: 22px;
     --font-size--extraLarge: 30px;
-    --font-size--big:46px
+    --font-size--big:46px;
+    --font-spacing-small:1px;
+    --font-spacing-medium:1.5px;
+    --font-spacing-regular:2px;
 }
