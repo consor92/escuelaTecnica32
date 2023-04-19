@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
 
 
-const navBar = ({ page }) => {
+const NavBar = ({ page }) => {
   const [sideBarOpen, setSideBarOpen] = useState(false)
 
   const handleOpenSideBar = () => {
@@ -63,4 +63,4 @@ const navBar = ({ page }) => {
   )
 }
 
-export default navBar
+export default NavBar
