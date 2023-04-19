@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Style from './Disciplines.module.css'
 import Link from 'next/link';
+import { IoChevronForwardSharp } from "react-icons/io5";
+
+
 
 const Disciplines = ({ props, showAs }) => {
   console.log('props', props)
@@ -32,10 +35,24 @@ const Disciplines = ({ props, showAs }) => {
   if (showAs === 'discipline') {
     console.log('props', props)
     return (
-      <div className={Style.containerPage}> 
+      <div className={Style.containerPage}>
         <div className={Style[`containerPage__${props.id}`]}>
           <h1 className={Style.containerPage__title}>{props.titleUppercase}</h1>
         </div>
+        <section className={Style.containerPage__discipline__info}>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} /> Titulo Oficial: <strong>Tecnico {props.title}</strong> (6 años)</h2>
+          <h3>Resolución Nº ${props.resolucion}/SSGECP/2012 - Ministerio de educacion</h3>
+        </section>
+        <section className={Style.containerPage__discipline__about}>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} /> Por que estudiar <strong>{props.titleUppercase}</strong></h2>
+          <p>{props.text_about_part1}</p>
+          <p>{props.text_about_part2}</p>
+        </section>
+        <section className={Style.containerPage__discipline__photo}>
+          <div className={Style.discipline__photo__one}>
+          </div>
+        </section>
+
       </div>
     )
   }

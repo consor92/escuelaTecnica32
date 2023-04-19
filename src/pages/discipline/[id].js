@@ -19,7 +19,6 @@ export default function DisciplinePage({ item }) {
 
 export async function getStaticPaths() {
 	const paths = await getPathsFromId()
-
 	return {
 		paths: paths,
 		fallback: false,
@@ -29,7 +28,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const id = params.id
-	console.log('id', id)
 	const res = await getItemData(id)
 	return {
 		props: {
