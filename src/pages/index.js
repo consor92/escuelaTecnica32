@@ -3,6 +3,7 @@ import NewsSection from '../Components/NewsSection/NewsSection'
 import Layout from '@/Components/Layout/Layout'
 import HomeIndex from '@/Components/HomeIndex/HomeIndex'
 import Disciplines from '@/Components/Disciplines/Disciplines'
+import Seccions from '@/Components/Secciones/Seccions.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
 
 
@@ -22,6 +23,7 @@ export default function Home({ item }) {
         <Disciplines
           props={item}
           showAs='allDisciplines' />      
+        <Seccions/>
     </>
   )
 }
