@@ -24,8 +24,8 @@ const Disciplines = ({ props, showAs }) => {
             onMouseEnter={() => handleMouseEnter(`${item.titleUppercase}`)}
             onMouseLeave={() => handleMouseLeave()}
           >
-            <h1 key={index} style={{ opacity: showText === `${item.titleUppercase}` ? 0 : 1, transition: 'opacity 0.8s ease' }}>{item.titleUppercase}</h1>
-            <h1 key={index} style={{ opacity: showText === `${item.titleUppercase}` ? 1 : 0, transition: 'opacity 0.8s ease' }}>DESCUBRE MAS...</h1>
+            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 0 : 1, transition: 'opacity 0.8s ease' }}>{item.titleUppercase}</h1>
+            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 1 : 0, transition: 'opacity 0.8s ease' }}>DESCUBRE MAS...</h1>
           </Link>
         )}
       </div>
@@ -33,7 +33,6 @@ const Disciplines = ({ props, showAs }) => {
   }
 
   if (showAs === 'discipline') {
-    console.log('props', props)
     return (
       <div className={Style.containerPage}>
         <div className={Style[`containerPage__${props.id}`]}>
