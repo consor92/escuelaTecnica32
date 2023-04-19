@@ -14,8 +14,10 @@
   padding: 10vh 13vw 10vh 13vw;
   width: 100vw;
   height: 100vh;
-  background-color:var(--background--black);
-
+  background-image: url('../../Assets/Images/bg_page_automotores.jpg');
+  background-color: var(--background--black);
+  background-blend-mode: multiply;
+  opacity: 0.99;
 }
 
 .News {
@@ -139,7 +141,7 @@
   font-size: 13px;
   left: 11px;
   bottom: 40px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   
 }
 
@@ -273,11 +275,45 @@
 }
 
 .News:hover, .News2Child:hover, .News3Child:hover {
-  transition: transform 0.3 ease-in-out;
   filter: saturate(1.2);
-  transform: scale(1.01);
-  transition: filter 0.2s ease-in-out;
+  transform: scale(1.02);
+  transition: filter 0.1s ease-in-out;
 }
 .News img:hover, .News2Child img:hover, .News3Child img:hover{
   filter: none;
 }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+    padding: 1vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "News"
+    "News2"
+    "News3";
+    }
+    .News2Child img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .News2, .News{
+      height: 25vh;
+    }
+    .News3{
+      height: 33vh;
+      padding: 0vw 1vw 0vw 1vw;
+    }
+    .News3 img {
+      height: 100%;
+    }
+    .containerButtongrid{
+      left:30%;
+    }
+
+    }

@@ -1,0 +1,95 @@
+.container {  display: grid;
+    /* position: relative; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "area1 area1 area2 area3"
+      "area1 area1 area2 area3"
+      "area5 area4 area6 area6"
+      "area5 area4 area6 area6";
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 13vw 10vh 13vw;
+    background-image: url('../../Assets/Images/bg_disciplines.png');
+    background-color: var(--background--blue);
+    background-blend-mode: multiply;
+    opacity: 0.94;
+  }
+ 
+  .area1 , .area2, .area3, .area4, .area5, .area6 { 
+    display: flex;
+    background-color: var(--background--black);
+    background-blend-mode: multiply;
+    opacity: 0.6;
+    justify-content: center;
+    align-items: center;
+ }
+ .area1:hover , .area2:hover, .area3:hover, .area4:hover, .area5:hover, .area6:hover{ 
+    display: flex;
+    background-color: var(--background--redIntense);
+    background-blend-mode: multiply;
+    opacity: 0.6;
+    justify-content: center;
+    align-items: center;
+ }
+ .area1 { grid-area: area1;
+    background-color: rgba(58, 194, 58, 0.466);
+ }
+  .area2 { grid-area: area2;
+    background-color: rgba(4, 80, 4, 0.63);
+ }
+  
+  .area3 { grid-area: area3;
+    background-color: rgba(201, 204, 18, 0.644);
+ }
+  
+  .area4 { grid-area: area4;
+    background-color: rgb(176, 211, 211);
+ }
+  
+  .area5 { grid-area: area5;
+    background-color: rgb(153, 0, 77);
+ }
+  
+  .area6 { grid-area: area6;
+    background-color: rgb(255, 174, 0);
+ }
+ @media only screen and (max-width: 768px) {
+    .container {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-areas: 
+          "area1 area1"
+          "area1 area1"
+          "area2 area3"
+          "area2 area3"
+          "area4 area4"
+          "area4 area4"
+          "area5 area6"
+          "area5 area6"; 
+        width: 100vw; 
+        height: 100vh;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+ }
+
+ .modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
