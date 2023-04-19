@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
  }
- .area1:hover , .area2:hover, .area3:hover, .area4:hover, .area5:hover, .area6:hover{ 
+ .area1:hover, .area2:hover, .area3:hover, .area4:hover, .area5:hover, .area6:hover{ 
     display: flex;
     background-color: var(--background--redIntense);
     background-blend-mode: multiply;

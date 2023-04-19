@@ -26,7 +26,8 @@
   display: flex;
   align-items: flex-start;
   height: 100%;
-  transition: transform 0.7s ease;
+  transform: scale(1.00);
+  transition: all 0.7s ease;
 }
 
 .News img {
@@ -90,11 +91,13 @@
   gap: 10px;
     grid-template-areas: 
     "News2 News2";
-    transition: transform 0.7s ease;
+      transform: scale(1.00);
 }
 
 .News2Child{
   position: relative;
+  transform: scale(1.00);
+  transition: all 0.7s ease;
  
 }
 
@@ -179,13 +182,14 @@
 }
 .News3Child{
   position: relative;
- 
+  transform: scale(1.00);
+  transition: all 0.7s ease;
 }
 
 .News3Child img {
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 100%;
 }
 
 .News3Child h2 {
@@ -233,8 +237,7 @@
   font-size: 10px;
   bottom: 0px;
   padding-left:8px;
-  border-bottom: 1px solid var(--background--redIntense);
-  border-left: 1px solid var(--background--redIntense);
+ 
 }
 .containerButtongrid {  display: grid;
   grid-template-areas:
@@ -277,7 +280,7 @@
 .News:hover, .News2Child:hover, .News3Child:hover {
   filter: saturate(1.2);
   transform: scale(1.02);
-  transition: filter 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .News img:hover, .News2Child img:hover, .News3Child img:hover{
   filter: none;
@@ -285,7 +288,6 @@
 
   @media only screen and (max-width: 768px) {
     .container {
-    padding: 1vw;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     gap: 5px;
@@ -303,7 +305,7 @@
       height: 100%;
     }
     .News2, .News{
-      height: 25vh;
+      height: 22vh;
     }
     .News3{
       height: 33vh;
