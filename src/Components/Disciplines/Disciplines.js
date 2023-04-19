@@ -6,7 +6,7 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 
 
 const Disciplines = ({ props, showAs }) => {
-  console.log('props', props)
+  
   const [showText, setShowText] = useState('')
 
   const handleMouseEnter = (text) => {
