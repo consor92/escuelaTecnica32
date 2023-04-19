@@ -19,13 +19,13 @@ const Disciplines = ({ props, showAs }) => {
   if (showAs === 'allDisciplines') {
     return (
       <div id='disciplines' className={Style.container}>
-        {props?.map(item =>
-          <Link href={`discipline/${item.id}`} className={Style[`container__${item.id}`]}
+        {props?.map((item,index) =>
+          <Link key={index} href={`discipline/${item.id}`} className={Style[`container__${item.id}`]}
             onMouseEnter={() => handleMouseEnter(`${item.titleUppercase}`)}
             onMouseLeave={() => handleMouseLeave()}
           >
-            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 0 : 1, transition: 'opacity 0.8s ease' }}>{item.titleUppercase}</h1>
-            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 1 : 0, transition: 'opacity 0.8s ease' }}>DESCUBRE MAS...</h1>
+            <h1 key={index} style={{ opacity: showText === `${item.titleUppercase}` ? 0 : 1, transition: 'opacity 0.8s ease' }}>{item.titleUppercase}</h1>
+            <h1 key={index} style={{ opacity: showText === `${item.titleUppercase}` ? 1 : 0, transition: 'opacity 0.8s ease' }}>DESCUBRE MAS...</h1>
           </Link>
         )}
       </div>
