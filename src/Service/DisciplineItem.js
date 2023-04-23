@@ -2,8 +2,7 @@ export async function getDisciplineItem() {
     const res = await fetch(`${process.env.BASE_URL}/api/item`);
     const items = await res.json();
     console.log(items)
-    return items;
-    
+    return items;    
 }
 
 
