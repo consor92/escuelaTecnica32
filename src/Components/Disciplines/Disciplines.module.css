@@ -105,8 +105,6 @@
   transition: all .5s ease;
 }
 
-
-
 .container__mecanica:hover::after,
 .container__computacion:hover::after,
 .container__automotores:hover::after {
@@ -119,7 +117,6 @@
 .container__automotores {
   border-radius: 0 25px 0 25px;
 }
-
 
 .containerPage {
   width: 100%;
@@ -173,7 +170,9 @@
 
 .containerPage__discipline__info,
 .containerPage__discipline__about,
-.containerPage__discipline__photo {
+.containerPage__discipline__photo,
+.containerPage__discipline__future,
+.containerPage__discipline__practice {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -187,14 +186,48 @@
   margin-top: 50px
 }
 
-
-.containerPage__discipline__info h2 {
+.containerPage__discipline__info h2,
+.containerPage__discipline__about h2,
+.containerPage__discipline__future h2,
+.containerPage__discipline__practice h2,
+.containerPage__discipline__workshopStuden h2,
+.containerPage__discipline__study h2 {
   display: flex;
   align-items: center;
   color: var(--font-color--white);
   font-size: var(--font-size--extraLarge);
   font-weight: 100;
   letter-spacing: var(--font-spacing-medium);
+}
+
+.containerPage__discipline__workshopStuden h2 {
+  font-size: var(--font-size--big);
+  font-weight: 800;
+  justify-content: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.discipline__workshopStuden__line {
+  border-bottom: solid 4px var(--font-color--redIntense);
+  padding-top: 10px;
+  width: 10%;
+}
+
+.containerPage__discipline__study h2 {
+  font-size: var(--font-size--big);
+  font-weight: 800;
+  justify-content: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.discipline__study__line {
+  border-bottom: solid 4px var(--font-color--redIntense);
+  padding-top: 10px;
+  width: 10%;
 }
 
 .containerPage__discipline__info h3 {
@@ -205,24 +238,41 @@
   letter-spacing: var(--font-spacing-medium);
 }
 
-.containerPage__discipline__about h2 {
-  display: flex;
-  align-items: center;
-  color: var(--font-color--white);
-  font-size: var(--font-size--extraLarge);
-  font-weight: 100;
-  letter-spacing: var(--font-spacing-medium);
-}
-
-.containerPage__discipline__about>p {
+.containerPage__discipline__about>p,
+.containerPage__discipline__future>p,
+.containerPage__discipline__practice>p {
   padding: 15px 0;
   color: var(--font-color--white);
   margin-left: 30px;
   line-height: 30px;
 }
 
-.discipline__photo__one {
-  height: 350px;
-  width: 500px;
-  background-color: blueviolet;
+.discipline__photo__one,
+.discipline__photo__two {
+  height: 530px;
+  width: 940px;
+  margin: 0 auto;
+  background-image: url('../../Assets/Images/mecanicaPage1.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.discipline__photo__two {
+  background-image: url('../../Assets/Images/mecanicaPage2.jpg');
+}
+
+.containerPage__discipline__workshopStuden {
+  padding: 60px 0;
+}
+
+.container_discipline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . ."
+    ". . . . .";
+  justify-items: stretch;
+  padding: 30px 0;
 }

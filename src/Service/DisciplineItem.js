@@ -1,3 +1,7 @@
+// import dotenv from 'dotenv';
+// dotenv.config();
+
+
 export async function getDisciplineItem() {
     const res = await fetch(`${process.env.BASE_URL}/api/item`);
     const items = await res.json();

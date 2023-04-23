@@ -39,3 +39,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* img{
+  outline: none !important;
+  border: none !important;
+  display: block;
+  user-select: none;
+} */

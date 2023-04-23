@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import Style from './Disciplines.module.css'
 import Link from 'next/link';
 import { IoChevronForwardSharp } from "react-icons/io5";
-
+import Image from 'next/image';
+import { Zoom, Fade } from 'react-reveal';
 
 
 const Disciplines = ({ props, showAs }) => {
-  
+
+  console.log('array', props.imagesData)
+
   const [showText, setShowText] = useState('')
 
   const handleMouseEnter = (text) => {
@@ -19,13 +22,13 @@ const Disciplines = ({ props, showAs }) => {
   if (showAs === 'allDisciplines') {
     return (
       <div id='disciplines' className={Style.container}>
-        {props?.map((item,index) =>
+        {props?.map((item, index) =>
           <Link key={index} href={`discipline/${item.id}`} className={Style[`container__${item.id}`]}
             onMouseEnter={() => handleMouseEnter(`${item.titleUppercase}`)}
             onMouseLeave={() => handleMouseLeave()}
           >
-            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 0 : 1, transition: 'opacity 0.8s ease' }}>{item.titleUppercase}</h1>
-            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 1 : 0, transition: 'opacity 0.8s ease' }}>DESCUBRE MAS...</h1>
+            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 0 : 1, transition: 'opacity 0.2s ease' }}>{item.titleUppercase}</h1>
+            <h1 style={{ opacity: showText === `${item.titleUppercase}` ? 1 : 0, transition: 'opacity 0.2s ease' }}>DESCUBRE MAS...</h1>
           </Link>
         )}
       </div>
@@ -39,19 +42,47 @@ const Disciplines = ({ props, showAs }) => {
           <h1 className={Style.containerPage__title}>{props.titleUppercase}</h1>
         </div>
         <section className={Style.containerPage__discipline__info}>
-          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} /> Titulo Oficial: <strong>Tecnico {props.title}</strong> (6 años)</h2>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} />Titulo Oficial:&nbsp;<strong>Tecnico {props.title}</strong>&nbsp;(6 años)</h2>
           <h3>Resolución Nº ${props.resolucion}/SSGECP/2012 - Ministerio de educacion</h3>
         </section>
         <section className={Style.containerPage__discipline__about}>
-          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} /> Por que estudiar <strong>{props.titleUppercase}</strong></h2>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} />Por que estudiar&nbsp;<strong>{props.titleUppercase}</strong></h2>
           <p>{props.text_about_part1}</p>
           <p>{props.text_about_part2}</p>
         </section>
         <section className={Style.containerPage__discipline__photo}>
-          <div className={Style.discipline__photo__one}>
+          <Fade left duration={3000}>
+            <div className={Style.discipline__photo__one}></div>
+          </Fade>
+        </section>
+        <section className={Style.containerPage__discipline__future}>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} /><strong>{props.titleUppercase}</strong>&nbsp;es considerada una carrera del futuro?</h2>
+          <p>{props.text_future_part1}</p>
+          <p>{props.text_future_part2}</p>
+        </section>
+        <section className={Style.containerPage__discipline__photo}>
+          <Fade left duration={3000}>
+            <div className={Style.discipline__photo__two}>
+            </div>
+          </Fade>
+        </section>
+        <section className={Style.containerPage__discipline__practice}>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} />Las&nbsp;<strong>Practicas Profesionalizantes</strong>&nbsp;durante la carrera</h2>
+          <p>{props.text_practice_part1}</p>
+        </section>
+        <section className={Style.containerPage__discipline__workshopStuden}>
+          <h2>Trabajos de nuestros alumnos  <span className={Style.discipline__workshopStuden__line}></span> </h2>
+          <div className={Style.container_discipline}>
+            <Zoom duration={3000}>
+              {props.imagesData?.map((item, index) =>
+                <Image key={index} src={`${item.url}`} width={385} height={380}></Image>
+              )}
+            </Zoom>
           </div>
         </section>
-
+        <section className={Style.containerPage__discipline__study}>
+          <h2> Plan de estudio <span className={Style.discipline__study__line}></span></h2>
+        </section>
       </div>
     )
   }

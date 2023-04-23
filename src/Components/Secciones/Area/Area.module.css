@@ -1,0 +1,12 @@
+.Area {
+    background-color: rgba(255, 0, 0, 0.253);
+    height: 100%;
+    width: 100%;
+  }
+  .Area h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Area p {background-color: blue;}
