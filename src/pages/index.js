@@ -1,10 +1,12 @@
 import { Inter } from 'next/font/google'
 import NewsSection from '../Components/NewsSection/NewsSection'
+import News from '../Components/News/News'
 import Layout from '@/Components/Layout/Layout'
 import HomeIndex from '@/Components/HomeIndex/HomeIndex'
 import Disciplines from '@/Components/Disciplines/Disciplines'
 import Seccions from '@/Components/Secciones/Seccions.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
+import Inscripciones from '@/Components/inscripciones/inscripciones'
 
 
 
@@ -22,7 +24,8 @@ export default function Home({ item }) {
         <NewsSection />
         <Disciplines
           props={item}
-          showAs='allDisciplines' />      
+          showAs='allDisciplines' />
+          <Inscripciones/>
         <Seccions/>
     </>
   )

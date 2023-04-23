@@ -19,6 +19,20 @@
   background-blend-mode: multiply;
   opacity: 0.99;
 }
+.parent{
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-grow: 1; 
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10vh 13vw 10vh 13vw;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../Assets/Images/bg_page_automotores.jpg');
+  background-color: var(--background--black);
+  background-blend-mode: multiply;
+  opacity: 0.99;
+}
 
 .News {
   grid-area: News;
