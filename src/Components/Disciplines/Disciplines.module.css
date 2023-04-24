@@ -168,18 +168,29 @@
   margin-left: 20px;
 }
 
+
+
+/*CSS De componente de cada disciplina*/
+
+
 .containerPage__discipline__info,
 .containerPage__discipline__about,
 .containerPage__discipline__photo,
 .containerPage__discipline__future,
-.containerPage__discipline__practice {
+.containerPage__discipline__practice,
+.containerPage__discipline__study {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 0 500px;
+  margin: 0 auto;
   padding: 30px;
+  width: 60%;
+}
+
+.containerPage__discipline__study {
+  width: 100%;
 }
 
 .containerPage__discipline__info {
@@ -198,6 +209,10 @@
   font-size: var(--font-size--extraLarge);
   font-weight: 100;
   letter-spacing: var(--font-spacing-medium);
+}
+
+.containerPage__discipline__study h2 {
+  margin: 0 auto;
 }
 
 .containerPage__discipline__workshopStuden h2 {
@@ -227,7 +242,7 @@
 .discipline__study__line {
   border-bottom: solid 4px var(--font-color--redIntense);
   padding-top: 10px;
-  width: 10%;
+  width: 40%;
 }
 
 .containerPage__discipline__info h3 {
@@ -250,10 +265,10 @@
 .discipline__photo__one,
 .discipline__photo__two {
   height: 530px;
-  width: 940px;
+  width: 100%;
   margin: 0 auto;
   background-image: url('../../Assets/Images/mecanicaPage1.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -275,4 +290,57 @@
     ". . . . .";
   justify-items: stretch;
   padding: 30px 0;
+}
+
+.container_discipline img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.discipline__study__infoSubject {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+  justify-items: stretch;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+.study__infoSubject__info {
+  width: 350px;
+  height: 740px;
+  background-color: var(--background--white);
+  border-radius: 10px;
+}
+
+.study__infoSubject__info h2 {
+  border-radius: 10px 10px 0 0;
+  border: rgba(255, 255, 255, 0.3) solid 1px;
+  border-bottom: none;
+  padding: 10px;
+  background-color: var(--background--black);
+  font-weight: 200;
+  font-size: var(--font-size--extraLarge);
+}
+
+.study__infoSubject__info h3 {
+  display: flex;
+  align-items:center;
+  font-weight: 100;
+  padding: 8px 20px;
+  font-size: var(--font-size--regular);
+}
+
+
+.study__infoSubject__info img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-bottom: 15px;
 }
