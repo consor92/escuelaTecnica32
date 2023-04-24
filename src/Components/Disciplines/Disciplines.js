@@ -10,7 +10,6 @@ import { BsFillCircleFill } from "react-icons/bs";
 
 const Disciplines = ({ props, showAs }) => {
 
-  console.log('array', props.imagesData)
 
   const [showText, setShowText] = useState('')
 

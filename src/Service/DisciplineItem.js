@@ -1,7 +1,6 @@
 export async function getDisciplineItem() {
     const res = await fetch(`http://localhost:3000/api/item`);
     const items = await res.json();
-    console.log(items)
     return items;
     
 }
