@@ -8,7 +8,6 @@ import { Zoom, Fade } from 'react-reveal';
 
 const Disciplines = ({ props, showAs }) => {
 
-  console.log('array', props.imagesData)
 
   const [showText, setShowText] = useState('')
 

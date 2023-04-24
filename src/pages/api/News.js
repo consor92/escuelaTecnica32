@@ -4,7 +4,6 @@ export default async function noticias(req, res) {
       const data = await response.json();
       res.status(200).json(data);
     } catch (error) {
-      console.error(error);
       const fakeData = [
         { id: "error-1", title: "Noticia por error 1", descripcion: "No se pudo obtener la noticia." },
         { id: "error-2", title: "Noticia por error 2", descripcion: "No se pudo obtener la noticia." },
