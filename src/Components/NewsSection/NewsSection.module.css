@@ -253,6 +253,14 @@
   padding-left:8px;
  
 }
+.News:hover, .News2Child:hover, .News3Child:hover {
+  filter: saturate(1.2);
+  transform: scale(1.02);
+  transition: all 0.1s ease-in-out;
+}
+.News img:hover, .News2Child img:hover, .News3Child img:hover{
+  filter: none;
+}
 .containerButtongrid {  display: grid;
   grid-template-areas:
     "prevButton newsButton nextButton";
@@ -268,6 +276,7 @@
 
 .prevButton { 
   all: unset;
+  width:20px;
   font-size:20px;
   grid-area: prevButton; 
   color: var(--font-color--white);
@@ -279,6 +288,7 @@
   all: unset;
   font-size:25px;
   bottom: 50px;
+  padding-bottom: 5px;
   grid-area: newsButton;
   color: var(--font-color--white);
 }
@@ -290,15 +300,11 @@
   color: var(--font-color--white);
  
 }
+.newsButton:hover, .nextButton:hover, .prevButton:hover{
+  color: var(--background--redIntense);
 
-.News:hover, .News2Child:hover, .News3Child:hover {
-  filter: saturate(1.2);
-  transform: scale(1.02);
-  transition: all 0.1s ease-in-out;
 }
-.News img:hover, .News2Child img:hover, .News3Child img:hover{
-  filter: none;
-}
+
 
   @media only screen and (max-width: 768px) {
     .container {

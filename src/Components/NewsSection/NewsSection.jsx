@@ -170,7 +170,7 @@ export default function Noticias() {
           <div className={styles.containerButtongrid}>
               {(
                 <button onClick={handlePrevClick} className={styles.prevButton}>
-                  {<AiFillCaretLeft/>}
+                  {newsIndex > 0 &&( <AiFillCaretLeft/>)}
                 </button>
               )}
 
