@@ -17,7 +17,7 @@
   background-image: url('../../Assets/Images/News.png');
   background-color: var(--background--black);
   background-blend-mode: multiply;
-  opacity: 0.99;
+  opacity: 1;
 }
 .parent{
   font-family: 'PT Sans', sans-serif;
