@@ -15,11 +15,11 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home({ item }) {
   return (
     <>
-      <Layout
+      {/* <Layout
       title='Esc. Tenica 32 "Gral. Jose de San Martin"'
       favicon='/logoet32.ico'
       page="home"
-      ></Layout>
+      ></Layout> */}
         <HomeIndex />
         <NewsSection />
         <Disciplines
