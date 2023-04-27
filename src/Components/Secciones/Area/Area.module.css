@@ -1,14 +1,58 @@
-.Area {
-    background-color: rgba(255, 0, 0, 0.253);
-    height: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 60% 40%;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img1 area1"
+      "img2 area2";
     width: 100%;
-    user-select: none;
-    cursor: default;
-  }
-  .Area h1 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .Area p {background-color: blue;}
+    height: 100%; 
+ }
+.img1,
+.img2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  grid-area: img1;
+  background-image: url("../../../Assets/Images/infra3.png");
+  border-radius: 20px 0px 0px 0px;
+
+}
+
+.img2 {
+  grid-area: img2;
+  background-image: url("../../../Assets/Images/infra6.png");
+}
+.area1, .area2{
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  font-size: 100%; 
+  padding-top: 12%;
+  padding: 10% 10% 10% 10%;
+  color: var(--background--white);
+}
+.area2 {
+  grid-area: area2;
+  border-radius: 0px 0px 20px 0px;
+
+}
+
+.area1 {
+  grid-area: area1;
+}
+.area1 h2 {
+  text-align: center;
+  color:var(--font-color--redIntense);
+  padding-bottom: 5%;
+}
+.area1 h3 {
+  font-size:95%
+}

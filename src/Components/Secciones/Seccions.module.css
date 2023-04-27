@@ -48,7 +48,8 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;  }
+  background-position: center;
+}
 .area1:hover,
 .area2:hover,
 .area3:hover,
@@ -79,7 +80,6 @@
 .area4 {
   grid-area: area4;
   background-image: url("../../Assets/Images/infra4.png");
-  
 }
 
 .area5 {

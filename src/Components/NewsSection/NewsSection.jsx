@@ -104,7 +104,6 @@ export default function Noticias() {
     router.push(
       {
       pathname: `/news/${id}`,
-      query: noticia.titulo,
       state:  noticia ,
     });
   };
