@@ -5,8 +5,22 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 import Image from 'next/image';
 import { Zoom, Fade } from 'react-reveal';
 import { BsFillCircleFill } from "react-icons/bs";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
+const url1 = 'https://cdn.wallpapersafari.com/95/49/RBudz6.jpg'
+const url2 = 'https://cutewallpaper.org/28/cool-africa-wallpaper/1306022341.jpg'
+const url3 = 'https://raw.githubusercontent.com/imagezzzz/blog_background/main/42.jpg'
+const url4 = 'https://www.cbc.ca/kids/images/wild_and_wonderful_asian_animals_header_1140.jpg'
+const url5 = 'https://e1.pxfuel.com/desktop-wallpaper/389/672/desktop-wallpaper-nosey-giraffe-long-neck.jpg'
 
+const items = [
+  <div className={Style.discipline__photo__two} style={{ backgroundImage: `url(${url1})` }}></div>,
+  <div className={Style.discipline__photo__two} style={{ backgroundImage: `url(${url2})` }}></div>,
+  <div className={Style.discipline__photo__two} style={{ backgroundImage: `url(${url3})` }}></div>,
+  <div className={Style.discipline__photo__two} style={{ backgroundImage: `url(${url4})` }}></div>,
+  <div className={Style.discipline__photo__two} style={{ backgroundImage: `url(${url5})` }}></div>,
+];
 
 const Disciplines = ({ props, showAs }) => {
 
@@ -42,14 +56,14 @@ const Disciplines = ({ props, showAs }) => {
         <div className={Style[`containerPage__${props.id}`]}>
           <h1 className={Style.containerPage__title}>{props.titleUppercase}</h1>
         </div>
-        
+
         <section className={Style.containerPage__discipline__info}>
-          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} />Titulo Oficial:&nbsp;<strong>Tecnico {props.title}</strong>&nbsp;(6 años)</h2>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '25', width: '25' }} />Titulo Oficial Tecnico {props.title} (6 años)</h2>
           <h3>Resolución Nº ${props.resolucion}/SSGECP/2012 - Ministerio de educacion</h3>
         </section>
 
         <section className={Style.containerPage__discipline__about}>
-          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} />Por que estudiar&nbsp;<strong>{props.titleUppercase}</strong></h2>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '25', width: '25' }} />Por que estudiar {props.titleUppercase}</h2>
           <p>{props.text_about_part1}</p>
           <p>{props.text_about_part2}</p>
         </section>
@@ -61,20 +75,37 @@ const Disciplines = ({ props, showAs }) => {
         </section>
 
         <section className={Style.containerPage__discipline__future}>
-          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} /><strong>{props.titleUppercase}</strong>&nbsp;es considerada una carrera del futuro?</h2>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '25', width: '25' }} />{props.titleUppercase} es considerada una carrera del futuro?</h2>
           <p>{props.text_future_part1}</p>
           <p>{props.text_future_part2}</p>
         </section>
 
         <section className={Style.containerPage__discipline__photo}>
-          <Fade left duration={3000}>
-            <div className={Style.discipline__photo__two}>
-            </div>
-          </Fade>
+
+          <AliceCarousel
+            autoPlay
+            autoPlayControls={false}
+            autoPlayStrategy="none"
+            autoPlayInterval={1000}
+            animationDuration={3500}
+            animationType="fadeout"
+            infinite
+            touchTracking={false}
+            disableDotsControls
+            disableButtonsControls
+            responsive={{
+              768: {
+                items: 1,
+                itemsFit: 'cover',
+              }
+            }}
+            items={items}
+          />
+
         </section>
 
         <section className={Style.containerPage__discipline__practice}>
-          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '30', width: '30' }} />Las&nbsp;<strong>Practicas Profesionalizantes</strong>&nbsp;durante la carrera</h2>
+          <h2> <IoChevronForwardSharp style={{ color: 'var(--font-color--redIntense)', height: '25', width: '25' }} />Practicas Profesionalizantes durante la carrera</h2>
           <p>{props.text_practice_part1}</p>
         </section>
 
