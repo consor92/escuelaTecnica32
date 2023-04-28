@@ -8,6 +8,7 @@
     --font-color--black: var(--background--black);
     --font-color--redIntense: var(--background--redIntense);
     --font-color--white: var(--background--white);
+    --font-color--grey:var(--background--grey);
     --font-size--small: 12px;
     --font-size--medium: 14px;
     --font-size--regular: 18px;
