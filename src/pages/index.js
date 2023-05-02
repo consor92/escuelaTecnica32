@@ -6,7 +6,7 @@ import HomeIndex from '@/Components/HomeIndex/HomeIndex'
 import Disciplines from '@/Components/Disciplines/Disciplines'
 import Seccions from '@/Components/Secciones/Seccions.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
-import Inscripciones from '@/Components/inscripciones/inscripciones'
+import Inscripciones from '@/Components/inscripciones/Inscripciones'
 
 
 
