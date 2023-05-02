@@ -2,6 +2,8 @@ import styles from "./NewsSection.module.css";
 import { useRouter } from "next/router";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 export default function Noticias() {
   const News = [
@@ -149,7 +151,6 @@ export default function Noticias() {
               </div>
             ))}
           </div>
-
           <div className={styles.News3}>
             {News.slice(newsIndex + 3, newsIndex + 6).map((noticia) => (
               <div
