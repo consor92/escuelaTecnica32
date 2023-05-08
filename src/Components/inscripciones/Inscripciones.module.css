@@ -22,6 +22,21 @@
   opacity: 0.98;
 }
 
+.container__titleVertical{
+  transform: rotate(-90deg);
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  left: -115px;
+  top: 46%;
+  font-size: var(--font-size--small);
+  font-weight: 100;
+  color: var(--background--white);
+  letter-spacing: var(--font-size--medium);
+}
+
+
+
 
 .title {
   display: flex;

@@ -31,12 +31,15 @@ const Disciplines = ({ props, showAs }) => {
     setShowText(text)
   }
 
+
+
   const handleMouseLeave = () => {
     setShowText('')
   }
   if (showAs === 'allDisciplines') {
     return (
       <div id='disciplines' className={Style.container}>
+        <h2 className={Style.container__titleVertical}>ESPECIALIDADES</h2>
         {props?.map((item, index) =>
           <Link key={index} href={`discipline/${item.id}`} className={Style[`container__${item.id}`]}
             onMouseEnter={() => handleMouseEnter(`${item.titleUppercase}`)}
@@ -52,7 +55,9 @@ const Disciplines = ({ props, showAs }) => {
 
   if (showAs === 'discipline') {
     return (
+
       <div className={Style.containerPage}>
+
         <div className={Style[`containerPage__${props.id}`]}>
           <h1 className={Style.containerPage__title}>{props.titleUppercase}</h1>
         </div>
