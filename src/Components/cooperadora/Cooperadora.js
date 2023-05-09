@@ -21,7 +21,7 @@ const Cooperadora = () => {
   return (
     <div className={Style.container}>
       <h1 className={Style.title}>Cooperadora Tecnica 32<span></span></h1>
-      <p className={Style.text}>Les damos la bienvenida a la cooperadora de la Técnica 32!!. Estamos para ayudarlos y acompañar a sus hijos en sus trayectos escolares. La cooperadora colaborará con necesidades varias y materiales para el funcionamiento de la escuela. Necesitamos de su colaboración para realizar este objetivo, no solo monetariamente sino también, con padres que se comprometan estando en la Comisión directiva. Los esperamos en la cooperadora, para escuchar sus inquietudes y propuestas.</p>
+      <p className={Style.text}>Les damos la bienvenida a la cooperadora de la Técnica 32. Estamos para ayudarlos y acompañar a sus hijos en sus trayectos escolares. La cooperadora colaborará con necesidades varias y materiales para el funcionamiento de la escuela. Necesitamos de su colaboración para realizar este objetivo, no solo monetariamente sino también, con padres que se comprometan estando en la Comisión directiva. Los esperamos en la cooperadora, para escuchar sus inquietudes y propuestas.</p>
       <div className={Style.container__msg}>
         <div className={Style.msg}></div>
         <div className={Style.image}>
