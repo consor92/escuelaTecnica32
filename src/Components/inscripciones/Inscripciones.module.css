@@ -41,6 +41,7 @@
 .title {
   display: flex;
   margin: 2% auto;
+  font-size: var(--font-size--big);
   font-weight: 100;
   letter-spacing: 2px;
   color: var(--background--white);
@@ -52,9 +53,9 @@
 
 .title span {
   display: flex;
-  border-bottom: solid 2px var(--background--redIntense);
+  border-bottom: solid 3px var(--background--redIntense);
   margin-top: .5%;
-  width: 10%;
+  width: 20%;
 }
 
 

@@ -8,6 +8,7 @@ import Seccions from '@/Components/Secciones/Seccions.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
 import Inscripciones from '@/Components/inscripciones/Inscripciones'
 import NewCarrusel from '@/Components/NewCarrusel/NewCarrusel'
+import Cooperadora from '@/Components/cooperadora/cooperadora'
 
 
 
@@ -17,9 +18,9 @@ export default function Home({ item }) {
   return (
     <>
       <Layout
-      title='Esc. Tenica 32 "Gral. Jose de San Martin"'
-      favicon='/logoet32.ico'
-      page="home"
+        title='Esc. Tenica 32 "Gral. Jose de San Martin"'
+        favicon='/logoet32.ico'
+        page="home"
       ></Layout>
         <HomeIndex />
         <NewsSection />
