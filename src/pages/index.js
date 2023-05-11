@@ -23,12 +23,13 @@ export default function Home({ item }) {
       ></Layout>
         <HomeIndex />
         <NewsSection />
-        <NewCarrusel/>
+        {/* <NewCarrusel/> */}
         <Disciplines
           props={item}
           showAs='allDisciplines' />
           <Inscripciones/>
         <Seccions/>
+        <Cooperadora/>
     </>
   )
 }
