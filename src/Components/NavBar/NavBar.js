@@ -47,9 +47,8 @@ const NavBar = ({ page }) => {
             <Link href='' >
               INFRAESTRUCTURA
             </Link>
-            <Link href='' >
-              COOPERADORA
-            </Link>
+            <a href='#cooperadora'>COOPERADORA</a>
+            
           </nav>
 
         </div>
