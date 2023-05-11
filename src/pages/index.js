@@ -7,7 +7,7 @@ import Disciplines from '@/Components/Disciplines/Disciplines'
 import Seccions from '@/Components/Secciones/Seccions.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
 import Inscripciones from '@/Components/inscripciones/Inscripciones'
-import Cooperadora from '@/Components/cooperadora/cooperadora'
+import Cooperadora from '@/Components/cooperadora/Cooperadora'
 
 
 
