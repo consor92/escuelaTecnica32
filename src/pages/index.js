@@ -7,7 +7,7 @@ import Disciplines from '@/Components/Disciplines/Disciplines'
 import Seccions from '@/Components/Secciones/Seccions.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
 import Inscripciones from '@/Components/inscripciones/Inscripciones'
-import Cooperadora from '@/Components/cooperadora/Cooperadora'
+import Cooperadora from '@/Components/cooperadora/cooperadora'
 
 
 
@@ -21,14 +21,14 @@ export default function Home({ item }) {
         favicon='/logoet32.ico'
         page="home"
       ></Layout>
-      <HomeIndex />
-      <NewsSection />
-      <Disciplines
-        props={item}
-        showAs='allDisciplines' />
-      <Inscripciones />
-      <Seccions />
-      <Cooperadora />
+        <HomeIndex />
+        <NewsSection />
+        <NewCarrusel/>
+        <Disciplines
+          props={item}
+          showAs='allDisciplines' />
+          <Inscripciones/>
+        <Seccions/>
     </>
   )
 }
