@@ -33,7 +33,11 @@ const Cooperadora = () => {
   return (
     <div id='cooperadora' className={Style.container}>
       <h1 className={Style.title}>Cooperadora Tecnica 32<span></span></h1>
-      <p className={Style.text}>Les damos la bienvenida a la cooperadora de la Técnica 32. Estamos para ayudarlos y acompañar a sus hijos en sus trayectos escolares. La cooperadora colaborará con necesidades varias y materiales para el funcionamiento de la escuela. Necesitamos de su colaboración para realizar este objetivo, no solo monetariamente sino también, con padres que se comprometan estando en la Comisión directiva. Los esperamos en la cooperadora, para escuchar sus inquietudes y propuestas.</p>
+      <p className={Style.text}>
+        Bienvenidos a la cooperadora de la 32. Estamos para ayudar y acompañar a tus hijos en la escuela, colaborando con necesidades y materiales. Necesitamos de su colaboración para alcanzar este objetivo, no solo en términos monetarios, sino también padres comprometidos que formen parte de la cooperadora. Los esperamos para escuchar sus inquietudes y propuestas.</p>
+      <a className={Style.btnMoreInfo} href='../../Assets/instructivoDocente.pdf' target='_blank'>
+        <button>+INFO</button>
+      </a>
       <div className={Style.container__msg}>
         <div className={Style.msg}>
           <AliceCarousel
@@ -51,6 +55,7 @@ const Cooperadora = () => {
           />
 
         </div>
+
         <div className={Style.images}>
           <AliceCarousel
             autoPlay
