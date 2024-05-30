@@ -23,7 +23,6 @@ export default function Home({ item }) {
       ></Layout>
         <HomeIndex />
         <NewsSection />
-        {/* <NewCarrusel/> */}
         <Disciplines
           props={item}
           showAs='allDisciplines' />
