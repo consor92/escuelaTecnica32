@@ -43,15 +43,12 @@ const NavBar = ({ page }) => {
           <nav>
             {page === 'home' ? <a href='#disciplines'>ESPECIALIDADES</a> : <Link href='/#disciplines'> ESPECIALIDADES</Link>}
 
-            <Link href='' >
-              INSCRIPCIONES
-            </Link>
+            <a href='#inscripciones'>INSCRIPCIONES</a>
             <Link href='' >
               INFRAESTRUCTURA
             </Link>
-            <Link href='' >
-              COOPERADORA
-            </Link>
+            <a href='#cooperadora'>COOPERADORA</a>
+            
           </nav>
 
         </div>

@@ -1,14 +1,71 @@
-.Area {
-    background-color: rgba(255, 0, 0, 0.253);
-    height: 100%;
-    width: 100%;
-    user-select: none;
-    cursor: default;
-  }
-  .Area h1 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .Area p {background-color: blue;}
+.container {
+  display: flex;
+  height: 75vh;
+  width: 74vw;
+  background-color: aquamarine;
+}
+
+.containerImage {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  height: 100%;
+  width: 50%;
+}
+
+.img1 {
+  height: 50%;
+  width: auto;
+  background-image: url("../../../Assets/Images/infra3.png");
+}
+
+.img2 {
+  height: 50%;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../Assets/Images/infra4.png");
+}
+
+.area {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background--black);
+  width: 90%;
+}
+
+.areaTitle {
+  display: flex;
+  width: 10%;
+  transform: rotate(-90deg);
+  height: 10%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.areaTitle>h2 {
+  color: var(--background--redIntense);
+  font-size: 27px;
+  white-space: nowrap;
+}
+
+.areaText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 90%;
+}
+
+.areaText h3 {
+  font-weight: 100;
+  margin-inline: auto;
+  font-size: var(--font-size--medium);
+  color: var(--background--white);
+  line-height: 30px;
+}
+
+
+

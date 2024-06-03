@@ -1,92 +1,158 @@
-.container {  display: grid;
-    font-family: 'PT Sans', sans-serif;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "area1 area1 area2 area3"
-      "area1 area1 area2 area3"
-      "area5 area4 area6 area6"
-      "area5 area4 area6 area6";
-    width: 100vw;
-    height: 100vh;
-    padding: 10vh 13vw 10vh 13vw;
-    background-image: url('../../Assets/Images/bg_disciplines.png');
-    background-color: var(--background--blue);
-    background-blend-mode: multiply;
-    opacity: 0.94;
-  }
-  .parent{width: 100vw;
+.container {
+  display: grid;
+  font-family: "PT Sans", sans-serif;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "area1 area2 area3 area3"
+    "area1 area2 area3 area3"
+    "area4 area4 area5 area6"
+    "area4 area4 area5 area6";
+  width: 100vw;
   height: 100vh;
   padding: 10vh 13vw 10vh 13vw;
-  background-image: url('../../Assets/Images/bg_disciplines.png');
+  background-image: url("../../Assets/Images/bg_disciplines.png");
   background-color: var(--background--blue);
   background-blend-mode: multiply;
-  opacity: 0.94;}
+  opacity: 0.94;
+  color: aliceblue;
+}
+
+.parent {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 13vw 10vh 13vw;
+  background-image: url("../../Assets/Images/bg_disciplines.png");
+  background-color: var(--background--blue);
+  background-blend-mode: multiply;
+  opacity: 0.94;
+  transition: all .5s ease;
+}
 
 
+.area1,
+.area2,
+.area3,
+.area4,
+.area5,
+.area6 {
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 70%;
+  user-select: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
 
-  .area1 , .area2, .area3, .area4, .area5, .area6 { 
-    display: flex;
-    background-color: var(--background--black);
-    background-blend-mode: multiply;
-    opacity: 0.6;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 70%;
-    user-select: none;
-    cursor: pointer;
- }
- .area1:hover, .area2:hover, .area3:hover, .area4:hover, .area5:hover, .area6:hover { 
-    display: flex;
-    background-color: var(--background--redIntense);
-    background-blend-mode: multiply;
-    opacity: 0.6;
-    justify-content: center;
-    align-items: center;
- }
- .area1 { grid-area: area1;
-    background-color: rgba(58, 194, 58, 0.466);
- }
-  .area2 { grid-area: area2;
-    background-color: rgba(4, 80, 4, 0.63);
- }
-  
-  .area3 { grid-area: area3;
-    background-color: rgba(201, 204, 18, 0.644);
- }
-  
-  .area4 { grid-area: area4;
-    background-color: rgb(176, 211, 211);
- }
-  
-  .area5 { grid-area: area5;
-    background-color: rgb(153, 0, 77);
- }
-  
-  .area6 { grid-area: area6;
-    background-color: rgb(255, 174, 0);
-    border-radius: 0px 0 20px 0;
- }
- @media only screen and (max-width: 768px) {
-    .container {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-areas: 
-          "area1 area1"
-          "area1 area1"
-          "area2 area3"
-          "area2 area3"
-          "area4 area4"
-          "area4 area4"
-          "area5 area6"
-          "area5 area6"; 
-        width: 100vw; 
-        height: 100vh;
-      margin: 0;
-    padding: 10px;}}
+
+.area1::after,
+.area2::after,
+.area3::after,
+.area4::after,
+.area5::after,
+.area6::after 
+  {
+  content: "";
+  position: absolute;  
+  height: 0%;
+  width: 0%;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.area1:hover::after,
+.area2:hover::after,
+.area3:hover::after,
+.area4:hover::after,
+.area5:hover::after,
+.area6:hover::after 
+  {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background--redIntense);
+  opacity: 0.6;
+  transition: all .5s ease;
+}
+
+
+.area1 {
+  grid-area: area1;
+  background-image: url("../../Assets/Images/infra1.png");
+}
+
+.area2 {
+  grid-area: area2;
+  background-image: url("../../Assets/Images/infra2.png");
+}
+
+.area3 {
+  grid-area: area3;
+  background-image: url("../../Assets/Images/infra3.png");
+}
+
+.area4 {
+  grid-area: area4;
+  background-image: url("../../Assets/Images/infra4.png");
+}
+
+.area5 {
+  grid-area: area5;
+  background-image: url("../../Assets/Images/infra5.png");
+}
+
+.area6 {
+  grid-area: area6;
+  background-image: url("../../Assets/Images/infra6.png");
+  border-radius: 0px 0 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "area1 area1"
+      "area1 area1"
+      "area2 area3"
+      "area2 area3"
+      "area4 area4"
+      "area4 area4"
+      "area5 area6"
+      "area5 area6";
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding: 10vh 2vw 2vh 2vw;
+  }
+
+  .area1,
+  .area2,
+  .area3,
+  .area4,
+  .area5,
+  .area6 {
+    font-size: 50%;
+  }
+}
+
+
+.area1 h1,
+.area2 h1,
+.area3 h1,
+.area4 h1,
+.area5 h1,
+.area6 h1 {
+  z-index: 999;
+}
