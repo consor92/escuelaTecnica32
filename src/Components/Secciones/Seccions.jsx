@@ -24,8 +24,7 @@ export default function Seccions() {
       </div>
     );
   } else {
-    componentToShow = (
-     
+    componentToShow = (     
       <div className={styles.parent} onClick={handleClick}>
         <Area areaNum={area} className={styles.area} setArea={setArea}/>
       </div>
