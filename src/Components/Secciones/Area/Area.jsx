@@ -3,7 +3,6 @@ import styles from './Area.module.css'
 import itemSeccions from '@/pages/api/itemSeccions';
 
 const Area = ({ areaNum, setArea }) => {
-  console.log(areaNum)
 
   const resulFilter = itemSeccions.filter(item => item.id === areaNum)
 
@@ -24,10 +23,15 @@ const Area = ({ areaNum, setArea }) => {
               <h2 >{item.title}</h2>
             </div>
             <div className={styles.areaText}>
-              <h3>{item.text}</h3>
-              <div className={styles.areaButton}>
-                <button onClick={() => handleCancel}>CERRAR</button>
-              </div>
+              <p>{item.text}</p>
+              <h3>AREAS QUE INTEGRAN</h3>
+              <div className={styles.lineText}></div>
+              {item.areas.map(area => (
+                <p className={styles.areaName}>· {area.name}</p>
+              ))}
+            </div>
+            <div className={styles.areaButton}>
+              <button onClick={() => handleCancel}>CERRAR</button>
             </div>
           </div>
         </div>
