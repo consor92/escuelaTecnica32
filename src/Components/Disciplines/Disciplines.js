@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Style from './Disciplines.module.css'
 import Link from 'next/link';
-import { IoChevronForwardSharp } from "react-icons/io5";
 import Image from 'next/image';
+import AliceCarousel from 'react-alice-carousel';
+import { IoChevronForwardSharp } from "react-icons/io5";
 import { Zoom, Fade } from 'react-reveal';
 import { BsFillCircleFill } from "react-icons/bs";
-import AliceCarousel from 'react-alice-carousel';
+import { optionAssignment } from '@/Service/optionAssignment'
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 const url1 = 'https://cdn.wallpapersafari.com/95/49/RBudz6.jpg'
@@ -23,15 +24,29 @@ const items = [
 ];
 
 const Disciplines = ({ props, showAs }) => {
-
+  console.log(props.id, 'prueba')
 
   const [showText, setShowText] = useState('')
+  const [optionValue, setOptionValue] = useState([])
+  let optionDefault = props.id
 
   const handleMouseEnter = (text) => {
     setShowText(text)
   }
 
+  function optionSelect() {
+    let result = []
+    result = optionAssignment(optionDefault)
+    return result
+  }
 
+  useEffect(() => {
+    let resultOption = optionSelect()
+    setOptionValue(resultOption)
+  }, [])
+
+
+console.log(optionValue,'PROBANDO')
 
   const handleMouseLeave = () => {
     setShowText('')
@@ -59,6 +74,12 @@ const Disciplines = ({ props, showAs }) => {
       <div className={Style.containerPage}>
 
         <div className={Style[`containerPage__${props.id}`]}>
+          <select>
+            <option>
+
+            </option>
+          </select>
+
           <h1 className={Style.containerPage__title}>{props.titleUppercase}</h1>
         </div>
 

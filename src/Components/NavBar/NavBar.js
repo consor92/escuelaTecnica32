@@ -8,6 +8,7 @@ const NavBar = ({ page }) => {
   const [sideBarOpen, setSideBarOpen] = useState(false)
 
   const handleOpenSideBar = () => {
+    console.log('ENTRE')
     setSideBarOpen(!sideBarOpen)
   }
 
@@ -25,30 +26,36 @@ const NavBar = ({ page }) => {
       <div className={`${Style.container__navBar} ${sideBarOpen ? Style.container__navBarOpen : Style.container__navBarClosed}`}>
         <div className={Style.container__navBarTop}>
           <nav>
-            <Link href='' >
+            <Link href='' onClick={handleOpenSideBar}>
               CALENDARIO
             </Link>
-            <Link href='' >
+            <Link href='' onClick={handleOpenSideBar}>
               NOTICIAS
             </Link>
-            <Link href='' >
+            <Link href='' onClick={handleOpenSideBar} >
               AUTORIDADES
             </Link>
-            <Link href='' >
+            <Link href='' onClick={handleOpenSideBar}>
               AULA VIRTUAL
             </Link>
           </nav>
         </div>
         <div className={Style.container__navBarBottom}>
           <nav>
-            {page === 'home' ? <a href='#disciplines'>ESPECIALIDADES</a> : <Link href='/#disciplines'> ESPECIALIDADES</Link>}
+            {page === 'home' ?
+              <a href='#disciplines' onClick={handleOpenSideBar}>ESPECIALIDADES</a>
+              :
+              <Link href='/#disciplines' onClick={handleOpenSideBar}> ESPECIALIDADES</Link>
+            }
 
-            <a href='#inscripciones'>INSCRIPCIONES</a>
-            <Link href='' >
+            <a href='#inscripciones' onClick={handleOpenSideBar}>INSCRIPCIONES</a>
+
+            <Link href='#sections' onClick={handleOpenSideBar} >
               INFRAESTRUCTURA
             </Link>
-            <a href='#cooperadora'>COOPERADORA</a>
             
+            <a href='#cooperadora' onClick={handleOpenSideBar}>COOPERADORA</a>
+
           </nav>
 
         </div>
