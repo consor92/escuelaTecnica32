@@ -53,19 +53,69 @@
 
 .areaText {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px;
   width: 90%;
 }
 
-.areaText h3 {
+.areaText p {
   font-weight: 100;
   margin-inline: auto;
-  font-size: var(--font-size--medium);
+  font-size: 16px;
   color: var(--background--white);
   line-height: 30px;
 }
 
+.areaText h3 {
+  width: 100%;
+  position: relative;
+  margin: 70px 0 25px 0;
+  font-size: var(--font-size--large);
+  color: var(--background--white);
+}
+ 
+.areaText h3::after{
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0%;
+  /* transform: translateX(-50%); */
+  width: 80px; /* Largo del borde */
+  border-bottom: 5px solid var(--background--redIntense);
+}
 
+.areaName {
+  width: 100%;
+  padding: 0 0 0 15px;
+}
 
+.areaButton {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.areaButton button {
+  height: 40px;
+  width: 100px;
+  color: var(--background--grey);
+  font-size: var(--font-size--regular);
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0 15px 15px 0;
+}
+
+.areaButton button:hover {
+  height: 40px;
+  color: var(--background--white);
+  border-radius: 5px;
+  font-size: var(--font-size--regular);
+  font-weight: 800;
+  border: none;
+  background-color: var(--background--redIntense);
+  transition: all .5s ease;
+}

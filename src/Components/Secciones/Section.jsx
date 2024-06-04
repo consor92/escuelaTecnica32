@@ -1,13 +1,10 @@
-import styles from "./Seccions.module.css";
+import styles from "./Section.module.css";
 import { useState } from "react";
 import Area from "./Area/Area";
 import itemSeccions from "@/pages/api/itemSeccions";
 
 export default function Seccions() {
   const [area, setArea] = useState(0);
-
-
-  console.log(area,'SECCIONES')
   const handleClick = () => {
     setArea(0);
   };

@@ -4,7 +4,7 @@ import News from '../Components/News/News'
 import Layout from '@/Components/Layout/Layout'
 import HomeIndex from '@/Components/HomeIndex/HomeIndex'
 import Disciplines from '@/Components/Disciplines/Disciplines'
-import Seccions from '@/Components/Secciones/Seccions.jsx'
+import Section from '@/Components/Secciones/Section.jsx'
 import { getDisciplineItem } from '@/Service/DisciplineItem'
 import Inscripciones from '@/Components/inscripciones/Inscripciones'
 import Cooperadora from '@/Components/cooperadora/Cooperadora'
@@ -27,7 +27,7 @@ export default function Home({ item }) {
           props={item}
           showAs='allDisciplines' />
           <Inscripciones/>
-        <Seccions/>
+        <Section/>
         <Cooperadora/>
     </>
   )
