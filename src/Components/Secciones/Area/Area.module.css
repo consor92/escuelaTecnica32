@@ -1,14 +1,14 @@
 .container {
   display: flex;
-  height: 75vh;
-  width: 74vw;
-  background-color: aquamarine;
+  height: 77vh;
+  width: 60vw;
+  position: relative;
+  z-index: 9;
 }
 
 .containerImage {
   display: flex;
   flex-direction: column;
-  background-color: blue;
   height: 100%;
   width: 50%;
 }

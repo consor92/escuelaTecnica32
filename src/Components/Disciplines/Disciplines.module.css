@@ -26,8 +26,8 @@
   display: flex;
   z-index: 1;
   position: absolute;
-  left: -180px;
-  font-size: var(--font-size--regular);
+  left: -163px;
+  font-size: var(--font-size--medium);
   font-weight: 100;
   color: var(--background--white);
   letter-spacing: var(--font-size--regular);
