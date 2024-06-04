@@ -29,9 +29,9 @@ const Area = ({ areaNum, setArea }) => {
               {item.areas.map(area => (
                 <p className={styles.areaName}>· {area.name}</p>
               ))}
-            </div>
-            <div className={styles.areaButton}>
-              <button onClick={() => handleCancel}>CERRAR</button>
+              <div className={styles.areaButton}>
+                <button onClick={() => handleCancel}>CERRAR</button>
+              </div>
             </div>
           </div>
         </div>
