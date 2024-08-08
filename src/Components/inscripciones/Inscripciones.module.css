@@ -98,7 +98,7 @@
   height: 100%;
   position: absolute;
   border-radius: 0 0 15px 0;
-  opacity: .8;
+  opacity: .6;
   background-color: var(--background--redIntense);
   transition: all .5s ease;
 }
