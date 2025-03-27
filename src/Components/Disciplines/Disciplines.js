@@ -36,7 +36,6 @@ const Disciplines = ({ props, showAs }) => {
   }
 
   function optionSelect() {
-    console.log('SELECCION', optionDefault)
     return assignment(optionDefault)?.filter(discipline => discipline.id !== optionDefault);
   }
 
@@ -84,9 +83,7 @@ const Disciplines = ({ props, showAs }) => {
         <div className={Style[`containerPage__${props.id}`]}>
           <h2 className={Style.containerPage_subtitle}>Mira otra especialidades</h2>
           <select className={Style.containerPage__title} onChange={handleChangeDiscipline}>
-            <option selected>
-              {optionDefault}
-            </option>
+       
             {optionValue.map((option, index) => (
               <option key={index} value={option.id}>
                 {option}
