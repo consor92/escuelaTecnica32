@@ -12,7 +12,7 @@ export function assignment(optionAssignment) {
         return result
     }
     if (optionAssignment === 'mecanica') {
-        result.push('Automotores', 'Computacion')
+        result.push('Computacion', 'Automotores')
         return result
     }
 }

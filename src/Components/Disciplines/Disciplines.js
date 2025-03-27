@@ -7,6 +7,7 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 import { Zoom, Fade } from 'react-reveal';
 import { BsFillCircleFill } from "react-icons/bs";
 import { assignment } from '@/Service/optionAssignment'
+import { useRouter } from 'next/router';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 const url1 = 'https://cdn.wallpapersafari.com/95/49/RBudz6.jpg'
@@ -24,11 +25,10 @@ const items = [
 ];
 
 const Disciplines = ({ props, showAs }) => {
-  console.log(props)
-  console.log(props.id, 'prueba')
 
   const [showText, setShowText] = useState('')
   const [optionValue, setOptionValue] = useState([])
+  const router = useRouter();
   let optionDefault = props.id
 
   const handleMouseEnter = (text) => {
@@ -36,22 +36,29 @@ const Disciplines = ({ props, showAs }) => {
   }
 
   function optionSelect() {
-    return assignment(optionDefault).filter(discipline => discipline.id !== optionDefault);
+    console.log('SELECCION', optionDefault)
+    return assignment(optionDefault)?.filter(discipline => discipline.id !== optionDefault);
   }
 
- useEffect(() => {
-   let resultOption = optionSelect()
-  console.log(resultOption,'Option')
-   setOptionValue(resultOption)
- }, [])
+  useEffect(() => {
+    let resultOption = optionSelect()
+    setOptionValue(resultOption)
+  }, [optionDefault])
 
 
-
-console.log(optionValue,'PROBANDO')
 
   const handleMouseLeave = () => {
     setShowText('')
   }
+
+
+  const handleChangeDiscipline = (e) => {
+    const selectDiscipline = e.target.value
+    if (selectDiscipline) {
+      router.push(`/discipline/${selectDiscipline.toLowerCase()}`);
+    }
+  }
+
   if (showAs === 'allDisciplines') {
     return (
       <div id='disciplines' className={Style.container}>
@@ -75,16 +82,18 @@ console.log(optionValue,'PROBANDO')
       <div className={Style.containerPage}>
 
         <div className={Style[`containerPage__${props.id}`]}>
-          <select>
-          {optionValue.map((option, index) => (
+          <h2 className={Style.containerPage_subtitle}>Mira otra especialidades</h2>
+          <select className={Style.containerPage__title} onChange={handleChangeDiscipline}>
+            <option selected>
+              {optionDefault}
+            </option>
+            {optionValue.map((option, index) => (
               <option key={index} value={option.id}>
-                {option.title}
+                {option}
               </option>
             ))}
 
           </select>
-
-          <h1 className={Style.containerPage__title}>{props.titleUppercase}</h1>
         </div>
 
         <section className={Style.containerPage__discipline__info}>
