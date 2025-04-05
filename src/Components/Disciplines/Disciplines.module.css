@@ -43,7 +43,7 @@
 }
 
 .container__mecanica {
-  border-radius: 25px 0 25px 0;
+  border-radius: 0 0 35px 0;
   background-image: url('../../Assets/Images/bg_mecanica.png');
   position: relative;
 }
@@ -88,11 +88,10 @@
 }
 
 
-.container__mecanica::after,
-.container__automotores::after {
+.container__mecanica::after {
   content: '';
   position: absolute;
-  border-radius: 25px 0 25px 0;
+  border-radius: 0 0 35px 0;
   height: 0%;
   width: 100%;
   opacity: 0;
@@ -112,7 +111,7 @@
 .container__automotores::after {
   content: '';
   position: absolute;
-  border-radius: 0 25px 0 25px;
+  border-radius: 35px 0 0 0;
   height: 0%;
   width: 100%;
   opacity: 0;
@@ -129,7 +128,8 @@
 }
 
 .container__automotores {
-  border-radius: 0 25px 0 25px;
+  /* border-radius: 0 25px 0 25px; */
+  border-radius: 35px 0 0 0;
 }
 
 
@@ -402,9 +402,29 @@
   }
 
 
-.containerPage__title {
-font-size: var(--font-size--regular);
-}
+  .container__titleVertical {
+    display: none;
+  }
+
+
+  .containerPage__title {
+    font-size: var(--font-size--regular);
+  }
+
+  .container__mecanica,
+  .container__computacion,
+  .container__automotores {
+    width: 330px;
+    height: 550px;
+    z-index: 9;
+  }
+
+  .container__mecanica h1,
+  .container__computacion h1,
+  .container__automotores h1 {
+    font-size: 32px;
+  }
+
 
   .containerPage__discipline__info,
   .containerPage__discipline__about,
