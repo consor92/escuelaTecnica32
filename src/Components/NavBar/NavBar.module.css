@@ -18,13 +18,13 @@
     text-align: center;
 }
 
-.escuelaTecnica_Img{
+.escuelaTecnica_Img {
     background-image: url('../../Assets/Images/logoET32.png');
     background-size: contain;
     background-position: center;
     width: 60px;
     height: 60px;
-    margin-left: 70px;
+    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-left: 0;
+    /* margin-left: 0; */
 }
 
 .escuelaTecnica_info h2 {
@@ -82,15 +82,18 @@
     height: 50px;
 }
 
-.container__navBarBottom a {
+.container__navBarBottom button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
     color: var(--font-color--black);
     margin: auto 50px;
     font-size: var(--font-size--regular);
     font-weight: bold;
 }
 
-.container__navBarBottom a:hover,
-.container__navBarTop a:hover {
+.container__navBarBottom button:hover,
+.container__navBarTop button:hover {
     color: var(--font-color--redIntense);
 }
 
@@ -111,16 +114,21 @@
         font-size: var(--font-size--extraLarge);
     }
 
-    .escuelaTecnica_info {
-        margin-right: 30px;
+    .icon-HiMenu {
+        width: 50px;
+        height: 50px;
     }
 
-    .container__navBar{
+    .escuelaTecnica_info {
+        /* margin-right: 30px; */
+    }
+
+    .container__navBar {
         width: 0;
         height: 0;
     }
 
-    .container__navBarClosed{
+    .container__navBarClosed {
         display: none;
     }
 
@@ -144,7 +152,7 @@
         margin-left: 20px;
     }
 
-    .container__navBarTop a {
+    .container__navBarTop button {
         font-size: var(--font-size--regular);
         margin: 20px 0 20px 0;
     }
@@ -163,8 +171,8 @@
         margin-left: 20px;
     }
 
-    .container__navBarBottom a {
-        width: 100vw;
+    .container__navBarBottom button {
+        /* width: 100vw; */
         margin: 25px 0 25px;
         font-size: var(--font-size--large);
     }
@@ -178,7 +186,8 @@
 
     .container__navBarTop a,
     .container__navBarBottom a {
-        margin: 25px 0 10px 0;;
+        margin: 25px 0 10px 0;
+        ;
     }
 
     .container__navBarBottom nav {
