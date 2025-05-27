@@ -75,10 +75,13 @@ const itemSeccions = [
         title: 'INSTALACIONES Y DEPORTIVAS',
         areas: [
             {
+                name: 'Gimnasio.'
+            },
+            {
                 name: 'Patio de actividades físicas.'
             },
             {
-                name: 'Patio de depoportes.'
+                name: 'Patio de portes.'
             }
         ],
         text: 'En esta área, nos aseguramos de proporcionar a nuestros estudiantes las instalaciones y los equipos necesarios para una amplia variedad de actividades deportivas y de educación física. Contamos con los materiales necesarios para que nuestros estudiantes puedan realizar actividades físicas seguras y efectivas. Además, contamos con un amplio patio de educación física y voley, para que los chicos  puedan practicar y participar en deportes y actividades físicas al aire libre.',
