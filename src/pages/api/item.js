@@ -4,7 +4,7 @@ const disciplineData = [
   {
     id: "computacion",
     title: "Técnico en Computación",
-    titleUppercase: "TÉCNICO EN COMPUTACIÓN",
+    titleUppercase: "COMPUTACIÓN",
     favicon: "/favicon.ico",
     resolucion: "Resolución N.º 4147/SSGECP/2012",
     text: "La Tecnicatura en Computación forma profesionales preparados para enfrentar los desafíos del mundo digital con herramientas sólidas, versátiles y actualizadas. Esta especialidad articula conocimientos de programación, redes, sistemas operativos y soporte técnico con una base integral en ciencias y ciudadanía. A lo largo de la carrera, los estudiantes adquieren capacidades clave para desempeñarse en distintos ámbitos productivos y tecnológicos. Es una formación estratégica para el presente y el futuro, en un sector en constante expansión y cambio. Se promueve la autonomía, el trabajo en equipo, la innovación y la capacidad de aprendizaje continuo. El egresado será capaz de integrarse a equipos de desarrollo, prestar asistencia técnica y desarrollar soluciones informáticas propias.",
@@ -172,7 +172,7 @@ const disciplineData = [
   {
     id: "mecanica",
     title: "Técnico Mecánico",
-    titleUppercase: "TÉCNICO MECÁNICO",
+    titleUppercase: "MECÁNICO",
     favicon: "/favicon.ico",
     resolucion: "Resolución N.º 4144/SSGECP/2012",
     text: "La Tecnicatura Mecánica brinda una sólida formación técnica para intervenir en procesos industriales, de mantenimiento y diseño mecánico. El plan de estudios promueve capacidades para proyectar, montar, operar y mantener instalaciones y sistemas mecánicos, hidráulicos y neumáticos. Se prioriza una formación práctica, articulada con fundamentos científicos y tecnológicos. El estudiante desarrolla una comprensión integral de los procesos productivos y su vinculación con la industria y la tecnología. Es una carrera ideal para quienes buscan un perfil técnico sólido con amplia salida laboral. El egresado puede insertarse en distintos sectores productivos o continuar estudios superiores.",
@@ -346,7 +346,7 @@ const disciplineData = [
   {
     id: "automotores",
     title: "Técnico en Automotores",
-    titleUppercase: "TÉCNICO EN AUTOMOTORES",
+    titleUppercase: "AUTOMOTORES",
     favicon: "/favicon.ico",
     resolucion: "Resolución N.º 4152/SSGECP/2012",
     text: "La Tecnicatura en Automotores ofrece una formación integral para intervenir en procesos de diagnóstico, mantenimiento y reparación de vehículos. El plan de estudios combina saberes científicos, tecnológicos y técnicos específicos del sector automotriz. Los estudiantes adquieren competencias para analizar, proyectar y realizar tareas técnicas sobre motores, sistemas de transmisión, frenos, electrónica del automotor y mucho más. Es una carrera orientada a la práctica, con fuerte inserción laboral. Se desarrolla en laboratorios y talleres que simulan situaciones reales del rubro. El egresado está capacitado para desempeñarse con autonomía, creatividad y responsabilidad profesional.",
